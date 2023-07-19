@@ -10,7 +10,7 @@ theme = "LoveIt"
   navbarTitle          = "Guy Cutting - Data Consulting"
   # Sets where "View More Posts" links
   viewMorePostLink     = "/post/"
-  navbarLogo         = "<img src='/images/GuyLogoStamp.png'>"
+  navbarLogo         = "<img src='GuyLogoStamp.png'>"
   # author = "Guy Cutting"
   contactname          = "Guy Cutting"
   contactemail         = "guy@nwdataconsulting.com"
