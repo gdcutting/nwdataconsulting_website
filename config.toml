@@ -1,0 +1,93 @@
+baseURL = "http://www.nwdataconsulting.com/"
+languageCode = "en-us"
+title = "Northwest Data Consulting - Guy Cutting"
+theme = "LoveIt"
+
+[params]
+  # Sets the meta tag description
+  description          = "Data analytics, science, engineering, web, cloud, simulation, modeling consulting services in the pacific northwest and beyond"
+  # Sets the navbarTitle that appears in the top left of the navigation bar
+  navbarTitle          = "Guy Cutting - Data Consulting"
+  # Sets where "View More Posts" links
+  viewMorePostLink     = "/post/"
+  navbarLogo         = "<img src='GuyLogoStamp.png'>"
+  # author = "Guy Cutting"
+  contactname          = "Guy Cutting"
+  contactemail         = "guy@nwdataconsulting.com"
+  bookinglink          = "https://squareup.com/appointments/book/te87ie5un3hfh7/LVJS5MDJE4ZAP/start"
+  showPosts            = "true"
+
+# Sets the menu items in the navigation bar
+# Identifier prepends a Font Awesome icon to the menu item
+# maybe simplify to Data Science, Cloud, Complex Systems
+# and put subcategories (HPC, Modeling, etc.) in category pages
+#[Menus]
+#  main = [
+#      {Name = "Home", URL = "/", Weight = "1", identifier = "fa fa-home"},
+#      {Name = "Blog", URL = "/post/", Weight = "2"},
+#      #{Name = "Web", URL = "/services/web", Weight = "3"},
+#      #{Name = "Data Science & ML", URL = "/datascience/", Weight = "4"},
+#      #{Name = "Modeling / Sim.", URL = "/datascience/", Weight = "4"},
+#     #{Name = "Cloud", URL = "/cloud/", Weight = "5"},
+#      #{Name = "Complex Systems", URL = "/systems/", Weight = "5"},
+#      {Name = "Mission", URL = "/mission/", Weight = "6"},
+#      {Name = "Services", URL = "/services/", Weight = "7"},
+#      {Name = "Build", URL = "/services/build", Weight = "7", parent = "Services"},
+#      {Name = "About", URL = "/about/", Weight = "8"},
+#      {Name = "Contact", URL = "/contact/", Weight = "9"}
+#  ]
+
+[menu]
+[[menu.main]]
+  name = 'Home'
+  pageRef = '/'
+  pre = '<i class="fa fa-home"></i>'
+  weight = 10
+[[menu.main]]
+  name = 'Blog'
+  pageRef = '/posts/'
+  pre = '<i class="fa fa-blog"></i>'
+  weight = 20
+[[menu.main]]
+  name = 'Mission'
+  pageRef = '/mission/'
+  pre = '<i class="fa fa-heart"></i>'
+  weight = 30
+[[menu.main]]
+  name = 'Services'
+  pageRef = '/services'
+  pre = '<i class="fa fa-cloud"></i>'
+  weight = 40
+[[menu.main]]
+  name = 'Build'
+  pageRef = '/services/build'
+  parent = 'Services'
+  weight = 1
+[[menu.main]]
+  name = 'Train'
+  pageRef = '/services/train'
+  parent = 'Services'
+  weight = 2
+[[menu.main]]
+  name = 'Soundtrack'
+  pageRef = '/soundtrack'
+  pre = '<i class="fa fa-music"></i>'
+  weight = 50
+[[menu.main]]
+  name = 'Contact'
+  pre = '<i class="fa fa-phone"></i>'
+  url = '/contact'
+  weight = 60
+[[menu.main]]
+  name = 'About'
+  pre = '<i class="fa fa-user"></i>'
+  url = '/about'
+  weight = 70
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
