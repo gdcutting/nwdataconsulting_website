@@ -2,7 +2,7 @@
 title: Northwest Data Consulting Home
 ---
 
-Welcome to Northwest Data Consulting. We provide consulting services focused on data analytics, AI, and machine learning in the Pacific Northwest and beyond.
+Welcome to Northwest Data Consulting. We provide consulting services focused on data analytics, engineering AI, and machine learning in the Pacific Northwest and beyond.
 
 ## Make the most of your data.
 

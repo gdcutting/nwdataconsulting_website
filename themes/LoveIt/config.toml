@@ -47,7 +47,7 @@
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      logo = "../../GDC-logo-web-trans.png"
+      logo = "GDC-logo-web-trans.png"
       # title name
       # 标题名称
       name = "Northwest Data Consulting"
@@ -529,7 +529,7 @@
       # 出版者信息
       [params.page.seo.publisher]
         name = ""
-        logoUrl = "images/GDC-logo-web-trans.png"
+        logoUrl = "../../GDC-logo-web-trans.png"
 
   # TypeIt config
   # TypeIt 配置
