@@ -1,5 +1,0 @@
-{{ if (fileExists . ) }}
-    {{ with readFile . }}
-        {{ safeHTML .  }}
-    {{ end }}
-{{ end }}
