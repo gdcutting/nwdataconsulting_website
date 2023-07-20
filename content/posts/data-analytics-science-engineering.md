@@ -1,7 +1,7 @@
 ---
 title: "What's the relationship between data analytics, data science, and data engineering?"
 date: 2023-04-11T19:21:44-07:00
-draft: true
+draft: false
 author: "Guy Cutting"
 ---
 

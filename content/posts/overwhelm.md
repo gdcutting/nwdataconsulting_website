@@ -1,7 +1,7 @@
 ---
 title: "Overwhelmed by data?"
 date: 2023-04-14T16:43:28-07:00
-draft: true
+draft: false
 author: "Guy Cutting"
 ---
 
