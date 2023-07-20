@@ -529,7 +529,7 @@
       # 出版者信息
       [params.page.seo.publisher]
         name = ""
-        logoUrl = "../../GDC-logo-web-trans.png"
+        logoUrl = "/GDC-logo-web-trans.png"
 
   # TypeIt config
   # TypeIt 配置
