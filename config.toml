@@ -2,7 +2,6 @@ baseURL = "http://www.nwdataconsulting.com/"
 languageCode = "en-us"
 title = "Northwest Data Consulting - Guy Cutting"
 theme = "LoveIt"
-# blah
 
 [params]
   # Sets the meta tag description
