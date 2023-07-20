@@ -3,6 +3,7 @@ name: Deploy Hugo site to Pages
 
 on:
   # Runs on pushes targeting the default branch
+  # branch needs to be set to my-pages for now
   push:
     branches: ["my-pages"]
 
