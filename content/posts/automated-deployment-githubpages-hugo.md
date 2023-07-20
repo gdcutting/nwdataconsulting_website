@@ -10,4 +10,22 @@ But once you choose a theme (which usually requires several rounds of the proces
 
 With Pages, there's more than one way to handle the deployment. From what I can tell, there are three in fact:
 
-- as described above, run Hugo locally to render content additions/updates, and then manually push the files to GitHub (either using CLI git or through the GitHub web interface.) This method works fine but doesn't take advantage of all the GitHub features that are available.
+- as described above, run Hugo locally to render content additions/updates, and then manually push the files to GitHub (either using CLI git or through the GitHub web interface.) This method works fine but doesn't take advantage of all the GitHub features that are available. 
+- the second method (see pick below) is to use GitHub's automated deployment feature to deploy a static site. With this option, I still have to build the site locally (by running Hugo to render the new content and config changes). I'm not honestly sure why you'd use this option, since if you're doing the Hugo build locally, the only thing left to do is to transfer the files to GitHub servers, which will happen automatically when you do whatever git workflow (CLI, through a VS Code extension, etc.) you do. GitHub Pages serves out of your repo, so once the files get updated there's nothing else to update. If someone wants to fill me in on why you'd want to use this method, feel free. Maybe I'm missing something.
+- the third and pretty clearly best method is to use GitHub automated deployment option with the remote Hugo build. With this method, once you push your files to the repo, GitHub performs the Hugo build automatically and your site gets updated with the new content. This makes it super easy to do content changes. My standard git workflow (I find myself still using CLI most of the time because it is faster) looks like:
+
+'''bash
+git add -A
+git commit -m 'my commit message'
+git pull 
+git push
+'''
+
+which stages changes, performs the commit, pulls down changes from the remote repo, and pushes local changes to the remote. This just takes a few seconds, and once you do this, everything else (the Hugo build and site update) happens (mostly) behind the scenes on the GitHub side, using GitHub Actions.
+
+Here's a shot of the repo settings GitHub Pages section showing the second two deployment options discussed above:
+[!/github-pages-deploy-options.png](GitHub Pages deployment options for Hugo site)
+
+There's a bit of infrastructure-as-code that GitHub uses to handle these automated deployments - a .yaml file that lives in your directory and gives build parameters such as Hugo version, which branch to build from
+
+[!/github-deploy-workflow-file.png](GitHub workflow file for Pages site build)
