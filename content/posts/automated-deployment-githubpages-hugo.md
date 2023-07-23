@@ -35,6 +35,20 @@ git push
 ```
 
 which stages changes, performs the commit, pulls down changes from the remote repo, and pushes local changes to the remote. This just takes a few seconds, and once you do this, everything else (the Hugo build and site update) happens (mostly) behind the scenes on the GitHub side, using GitHub Actions.
+
+There's a further bit of automation that we can employ here as well. Following this helpful article:
+
+[Alias for git add, commit, and push all together](https://dev.to/bivor/alias-for-git-add-commit-and-push-all-together-5ako)
+
+I did, well, just what the title suggests, creating an alias to pack the most common git workflow commands for deploying content updates into one command (I used `acp`, short for Add Commit Push). If you simply run
+
+git config --global alias.acp '!f() { git add -A && git commit -m "$@" && git push; }; f'
+
+and replace 'acp' with your chosen alias, you can compress multiple git commands into one. Now whenever I have modified files and I want to push the changes to GitHub, all I have to do is run:
+
+`git acp "my commit message"`
+
+and provide a relevant commit message. That's it! Shortening three commands (add, commit, push), is a small time savings but it adds up over time when you're pushing frequent updates. So now when I have new content I just have to do `git acp` and git automatically adds the updated files to the local HEAD, commits the changes, pushes those changes to the remote repository, then (on the GitHub server side) performs the Hugo build and deploys the updates. That's a pretty slick workflow.
  
 ### Choosing Between Github Deployment Options
  
