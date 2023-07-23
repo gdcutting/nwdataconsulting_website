@@ -5,7 +5,7 @@ draft: false
 author: "Guy Cutting"
 ---
 
-![Hugo logo](/hugo-logo.svg)
+![Hugo logo](../../hugo-logo.svg)
 
 This post is slightly off topic, but as someone who always likes to peer under the hood when I look at other people's websites, I think some of you might appreciate it. In building this website, I made the decision to leave Joomla behind and embrace Hugo, and I couldn't be happier with the decision.
 
