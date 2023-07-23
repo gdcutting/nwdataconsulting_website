@@ -2,7 +2,6 @@
 title: Northwest Data Consulting Home
 ---
 
-<center>![NW Data Consulting Logo](../GDC-logo-web-trans.png)</center>
 Welcome to Northwest Data Consulting. We provide consulting services focused on data analytics, engineering AI, and machine learning in the Pacific Northwest and beyond.
 
 # Make the most of your data
