@@ -14,18 +14,22 @@ With Pages, there's more than one way to handle the deployment. From what I can 
 - the second method (see pick below) is to use GitHub's automated deployment feature to deploy a static site. With this option, I still have to build the site locally (by running Hugo to render the new content and config changes). I'm not honestly sure why you'd use this option, since if you're doing the Hugo build locally, the only thing left to do is to transfer the files to GitHub servers, which will happen automatically when you do whatever git workflow (CLI, through a VS Code extension, etc.) you do. GitHub Pages serves out of your repo, so once the files get updated there's nothing else to update. If someone wants to fill me in on why you'd want to use this method, feel free. Maybe I'm missing something.
 - the third and pretty clearly best method is to use GitHub automated deployment option with the remote Hugo build. With this method, once you push your files to the repo, GitHub performs the Hugo build automatically and your site gets updated with the new content. This makes it super easy to do content changes. My standard git workflow (I find myself still using CLI most of the time because it is faster) looks like:
 
-'''bash
+```bash
 git add -A
 git commit -m 'my commit message'
 git pull 
 git push
-'''
+```
 
 which stages changes, performs the commit, pulls down changes from the remote repo, and pushes local changes to the remote. This just takes a few seconds, and once you do this, everything else (the Hugo build and site update) happens (mostly) behind the scenes on the GitHub side, using GitHub Actions.
 
 Here's a shot of the repo settings GitHub Pages section showing the second two deployment options discussed above:
-[!/github-pages-deploy-options.png](GitHub Pages deployment options for Hugo site)
+![GitHub Pages deployment options for Hugo site](/github-pages-deploy-options.png)
 
-There's a bit of infrastructure-as-code that GitHub uses to handle these automated deployments - a .yaml file that lives in your directory and gives build parameters such as Hugo version, which branch to build from
+There's a bit of infrastructure-as-code that GitHub uses to handle these automated deployments - a .yaml file that lives in your directory and gives build parameters such as Hugo version, OS version, which branch to build from, etc:
 
-[!/github-deploy-workflow-file.png](GitHub workflow file for Pages site build)
+![GitHub workflow file for Pages site build](/github-deploy-workflow-file.png)
+
+Most of this is boilerplate and you don't need to worry about changing it, but it is interesting to look under the hood to glean some info about how these builds are performed. When you select one of the above two Pages deployment options (Hugo build or static site), GitHub automatically generates this .yaml workflow file for you, so you don't have to know any of the details. The only thing you'll probably want to check is the build branch, because if you're not using `main` then you'll want to specify that near the top with the `branches` parameter.
+
+Now that we've got the automation workflow set up. What happens when we run it, which happens automatically when any changes to the build bras1s1nch (in my case `my-pages`)? One of the great things about GitHub is that it has all sorts of fancy machinery (hooks on the backend and JS on the front) to detect changes and display status in real time. When you trigger the build, the 
