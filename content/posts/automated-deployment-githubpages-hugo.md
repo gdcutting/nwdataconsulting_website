@@ -64,7 +64,7 @@ We can assume that behind the scenes GitHub is spinning up a Docker container wi
 
 # Summary
 
-After trying a number of CMS and other build options for the site, I arrived at Hugo as the best for my purposes (see [the post on switching from Joomla to Hugo](../joomla-to-hugo/)) for more details. Originally I had planned to host the new Hugo site at Dreamhost and do the build myself locally whenever there were changes. But I wanted to try out GitHub pages, and digging more into the features that Pages makes available, one of the most helpful seemed to be automated deployment. 
+After trying a number of CMS and other build options for this site, I arrived at Hugo as the best for my purposes (see [the post on switching from Joomla to Hugo](../joomla-to-hugo/)) for more details. Originally I had planned to host the new Hugo site at Dreamhost and do the build myself locally whenever there were changes. But I wanted to try out GitHub pages, and digging more into the features that Pages makes available, one of the most helpful seemed to be automated deployment. 
 
 If you choose to let GitHub Pages handle your Hugo deployment automatically with GitHub Actions, you can simplify the deployment process down to its bare minimum: just push your most recent changes to the working Pages branch of your repository, and GitHub will handle the build and deployment for you. Then you can just focus on creating content and the deployment will happen automatically with just a few keystrokes.
 
