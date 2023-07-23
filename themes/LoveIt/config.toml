@@ -181,7 +181,7 @@
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = "/nwdataconsulting/gdc_headshot_geode.png"
+      avatarURL = "/gdc_headshot_geode.png"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
