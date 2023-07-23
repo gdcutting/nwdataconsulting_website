@@ -35,7 +35,9 @@ git push
 ```
 
 which stages changes, performs the commit, pulls down changes from the remote repo, and pushes local changes to the remote. This just takes a few seconds, and once you do this, everything else (the Hugo build and site update) happens (mostly) behind the scenes on the GitHub side, using GitHub Actions.
-
+ 
+### Choosing Between Github Deployment Options
+ 
 Here's a shot of the repo settings GitHub Pages section showing the second two deployment options discussed above (under 'Use a suggested workflow...'):
 ![GitHub Pages deployment options for Hugo site](../../github-pages-deploy-options.png)
 
@@ -51,6 +53,8 @@ Most of this is boilerplate and you don't need to worry about making changes the
 Now that we've got the automation workflow set up, what happens when we run it, which happens automatically when any changes are pushed to the build branch (in my case `my-pages`)? One of the great things about GitHub is that it has all sorts of fancy machinery (hooks on the backend and JS on the front) to detect changes and display status in real time. When you trigger the build by pushing changes to the build branch, GitHub detects the changes, invokes your specified Action(s), and updates the status display in real time:
 
 ![GitHub Actions progress update](../../github-actions-in-progress.png)
+
+### Detailed Deployment Status
 
 This build progress page shows you an overview with the action number (22), the commit that triggered it (```2adfda8```), the 'In Progress' status, and that the Hugo build is ongoing, to be followed by the deployment. If you click on 'deploy', you'll get a more detailed progress page for the deploy action:
 
