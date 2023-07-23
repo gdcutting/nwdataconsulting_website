@@ -6,6 +6,9 @@ author: "Guy Cutting"
 ---
 
 ![Venn Diagram of Data Engineering, Data Science, and Business Stakeholders](/data-scientist-engineer-diagram.png)
+
+This diagram is helpful for visualizing the relationship between data engineering, data science, and the business stakeholders. Thanks to [David Holm on Twitter](https://twitter.com/cloudpreacher). 
+
 A subject that is sometimes the source of ambiguity and confusion is the relationship between data analytics, data science, and data engineering. Increasingly common usage of such terms such as *data analytics engineering*, *business intelligence engineering*, and others can make it even more unclear where the boundaries between these categories and roles actually lie.
 
 *Analytics* can be used in a couple of ways. It is often used in a very general way to refer to the entire process of working with data, from start to finish. In that general sense, *analytics* incorporates data science and data engineering. But *analytics*  can also be used more specifically to refer to the process of building reports from data that has already been ingested and transformed (a process which usually requires several steps.) Thus the *data analyst* role is often restricted to the 'front end' of the process, which involves writing queries that retrieve the appropriate data in the form needed for particular reports.
