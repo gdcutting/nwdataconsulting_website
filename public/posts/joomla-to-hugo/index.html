@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Joomla to Hugo - Northwest Data Consulting - Guy Cutting</title><meta name="Description" content="Data analytics, science, engineering, web, cloud, simulation, modeling consulting services in the pacific northwest and beyond"><meta property="og:title" content="Joomla to Hugo" />
+<meta property="og:description" content="This post is slightly off topic, but as someone who always likes to peer under the hood when I look at other people&rsquo;s websites, I think some of you might appreciate it. In building this website, I made the decision to leave Joomla behind and embrace Hugo, and I couldn&rsquo;t be happier with the decision.
+For years my business website used Joomla, the open source CMS. I picked Joomla because, after using WordPress for a while, I wanted something with more features and ability to customize." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.nwdataconsulting.com/posts/joomla-to-hugo/" /><meta property="og:image" content="https://www.nwdataconsulting.com/GDC-logo-web-trans.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-10T22:57:30-07:00" />
+<meta property="article:modified_time" content="2023-04-10T22:57:30-07:00" /><meta property="og:site_name" content="Northwest Data Consulting" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.nwdataconsulting.com/GDC-logo-web-trans.png"/>
+
+<meta name="twitter:title" content="Joomla to Hugo"/>
+<meta name="twitter:description" content="This post is slightly off topic, but as someone who always likes to peer under the hood when I look at other people&rsquo;s websites, I think some of you might appreciate it. In building this website, I made the decision to leave Joomla behind and embrace Hugo, and I couldn&rsquo;t be happier with the decision.
+For years my business website used Joomla, the open source CMS. I picked Joomla because, after using WordPress for a while, I wanted something with more features and ability to customize."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.nwdataconsulting.com/posts/joomla-to-hugo/" /><link rel="prev" href="https://www.nwdataconsulting.com/posts/bigquery-cost-control/" /><link rel="next" href="https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Joomla to Hugo",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.nwdataconsulting.com\/posts\/joomla-to-hugo\/"
+        },"genre": "posts","wordcount":  2102 ,
+        "url": "https:\/\/www.nwdataconsulting.com\/posts\/joomla-to-hugo\/","datePublished": "2023-04-10T22:57:30-07:00","dateModified": "2023-04-10T22:57:30-07:00","publisher": {
+            "@type": "Organization",
+            "name": "","logo": "https:\/\/www.nwdataconsulting.com\/nwdataconsulting\/GDC-logo-web-trans.png"},"author": {
+                "@type": "Person",
+                "name": "Guy Cutting"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Northwest Data Consulting - Guy Cutting"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/GDC-logo-web-trans.png"
+        data-srcset="/GDC-logo-web-trans.png, /GDC-logo-web-trans.png 1.5x, /GDC-logo-web-trans.png 2x"
+        data-sizes="auto"
+        alt="/GDC-logo-web-trans.png"
+        title="/GDC-logo-web-trans.png" />Northwest Data Consulting</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Northwest Data Consulting Home"><i class="fa fa-home"></i> Home </a><a class="menu-item active" href="/posts/" title="Posts"><i class="fa fa-blog"></i> Blog </a><a class="menu-item" href="/mission/" title="Mission"><i class="fa fa-heart"></i> Mission </a><a class="menu-item" href="/services/" title="Services"><i class="fa fa-cloud"></i> Services </a><a class="menu-item" href="/soundtrack/" title="Soundtrack"><i class="fa fa-music"></i> Soundtrack </a><a class="menu-item" href="/contact"><i class="fa fa-phone"></i> Contact </a><a class="menu-item" href="/about"><i class="fa fa-user"></i> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Northwest Data Consulting - Guy Cutting"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/GDC-logo-web-trans.png"
+        data-srcset="/GDC-logo-web-trans.png, /GDC-logo-web-trans.png 1.5x, /GDC-logo-web-trans.png 2x"
+        data-sizes="auto"
+        alt="/GDC-logo-web-trans.png"
+        title="/GDC-logo-web-trans.png" />Northwest Data Consulting</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="Northwest Data Consulting Home"><i class="fa fa-home"></i>Home</a><a class="menu-item" href="/posts/" title="Posts"><i class="fa fa-blog"></i>Blog</a><a class="menu-item" href="/mission/" title="Mission"><i class="fa fa-heart"></i>Mission</a><a class="menu-item" href="/services/" title="Services"><i class="fa fa-cloud"></i>Services</a><a class="menu-item" href="/soundtrack/" title="Soundtrack"><i class="fa fa-music"></i>Soundtrack</a><a class="menu-item" href="/contact" title=""><i class="fa fa-phone"></i>Contact</a><a class="menu-item" href="/about" title=""><i class="fa fa-user"></i>About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Joomla to Hugo</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Guy Cutting</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-10">2023-04-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2102 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;10 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../hugo-logo.svg"
+        data-srcset="../../hugo-logo.svg, ../../hugo-logo.svg 1.5x, ../../hugo-logo.svg 2x"
+        data-sizes="auto"
+        alt="../../hugo-logo.svg"
+        title="Hugo logo" /></p>
+<p>This post is slightly off topic, but as someone who always likes to peer under the hood when I look at other people&rsquo;s websites, I think some of you might appreciate it. In building this website, I made the decision to leave Joomla behind and embrace Hugo, and I couldn&rsquo;t be happier with the decision.</p>
+<br>
+<p>For years my business website used Joomla, the open source CMS. I picked Joomla because, after using WordPress for a while, I wanted something with more features and ability to customize. Initially when I started working with Joomla, in about 2015, I was pretty happy with it. It&rsquo;s powerful, supported by all hosting providers, and has a huge ecosystem of extensions, plugins, and templates (themes). But after I managed and developed a Joomla site for a while, I started to grow increasingly frustrated with it.</p>
+<br>
+<p>The first problem I found with Joomla was that, despite the huge number of available templates, all Joomla websites sort of end up looking the same. There&rsquo;s a lot of customizability, but a lot of the templates are built on a handful of frameworks, so there&rsquo;s not a lot of genuinely distinctive templates available.</p>
+<br>
+<p>Another problem for me is that Joomla is kind of creaky. What I mean is that I felt like I was often running into technical issues that weren&rsquo;t trivial to troubleshoot. More than once a change in PHP version on my hosting provider caused small errors or even broke the site entirely. It&rsquo;s also bloated, since it depends on the whole LAMP stack which includes PHP and MySQL. So even for a small website you have a whole database running in the background and a lot of queries even to build basic pages.</p>
+<br>
+<p>That bloat creates a lot of security issues, too. I never had e-commerce or user accounts on my site, so there wasn&rsquo;t much a hacker could do if they gained access, but it was always in the back of my mind that if I was running a site with more sensitive data, Joomla might be a real nightmare.</p>
+<br>
+<p>Probably my biggest source of frustration related to getting templates to work properly. Some of the first themes I tried weren&rsquo;t easily customizable without a lot of custom CSS, which I&rsquo;m not proficient at. Eventually I found templates built on the Helix framework, and at first those seemed pretty good. Helix provides a whole graphical interface for customizing your site, so in theory you can easily specify logos, colors, layout, etc.</p>
+<br>
+<p>I say &lsquo;in theory&rsquo; because as time went on that became increasingly less true. Even in the best case, there was always at least some small set of things that I just couldn&rsquo;t get to look quite right. The site was always about 90% of what I really wanted it to look like. For a while, that was fine, since the site still looked good and functioned well.</p>
+<br>
+<p>But I reached a breaking point a few days ago when I was trying to set the site up again after not maintaining it for a while. When I took a full-time salaried job last year, I stopped dealing with the website because I didn&rsquo;t have time and there wasn&rsquo;t much point. So when I decided to start this business, I needed to resurrect it. I thought, &rsquo;no big deal, I&rsquo;ll just set hosting up again, install Joomla, and restore the site from a backup.&rsquo; That process went mostly as planned (despite the always cumbersome process of installing the database and Joomla itself, and reconfiguring some things).</p>
+<br>
+<p>For some reason, with that last Joomla installation, I hit a template wall. The template I had used for a while would no longer properly reflect appearance and layout changes. I couldn&rsquo;t save changes to colors, fonts, and other things. A lot of the problem, I think, had to do with the big change from Joomla 3 to Joomla 4. That seemed to break a lot of existing extensions and templates that weren&rsquo;t specifically updated for v4, and I read a lot of support threads of other people having similar issues.</p>
+<br>
+<p>I thought I&rsquo;d find a different template/framework and ended up installing T4. That was messy because the docs were unclear and even after I had several plugins installed, my chosen template still didn&rsquo;t work right. I finally realized that this situation was never going to get any better, and that I was always going to be frustrated with a Joomla site.</p>
+<br>
+<p>I had tried Hugo in the past to build a website for a different business. I liked the experience, because it was pretty easy to use but also appealed to my hacker side (using a CLI and working a lot with config files). I decided to give Hugo another go for the rebuild of this website.</p>
+<br>
+<p>Hugo is a static site generator, meaning that it parses config and markdown files to render your page into static HTML. One of the advantage of this model is speed - when all the server has to do is serve .html pages, it&rsquo;s lightning fast. It also avoids all the issues of database and application configuration. That&rsquo;s not to say that Hugo is a magic wand, since even when you choose a theme, there&rsquo;s still quite a bit of coding-like activity to get the site configured properly and get your content into the right form.</p>
+<br>
+<p>The elegant simplicity of having only text files (.html, .css, .toml) on your webserver also is a giant advantage in terms of site reliability. I will never, ever forget the time, a few years back, that my Joomla site broke when my hosting provider did an automatic PHP version upgrade. One day, after not looking at the site for a few days or longer, I visited it to find nothing but a white page with the text &lsquo;Internal server error.&rsquo; That was it. I was in the process of applying for jobs at the time, so I was horrified at the prospect that some potential employer had seen my broken site. For any hiring manager or prospective client evaluating a potential job candidate, seeing a totally barfed site would be an instant dealbreaker. Fortunately I don&rsquo;t think anyone noticed, and after an hour of poking around I figured out the problem and fixed it. But it left me uneasy for a long time to come. But with straight html files, the only thing that could go wrong is if your hosting provider accidentally deleted your files (which is vanishingly rare), or you forgot to pay your hosting bill. The peace of mind of having a rock-solid site that can&rsquo;t break with behind-the-scenes changes on the server is a big plus for Hugo.</p>
+<br>
+<p>I chose the <a href="https://hugoloveit.com/" target="_blank" rel="noopener noreffer ">LoveIt theme</a> because I just liked the aesthetics and it had a dark mode (which is huge for me). And it also seemed oriented towards profile-based professional services. It took a few hours of poking around to get the theme configured and adjust a couple of layouts to my needs. But once I got things configured, it&rsquo;s super easy to add content - you just create a new markdown (.md) file and add your content. Hugo renders the markdown into HTML, so it&rsquo;s easy to create visually appealing content without having to deal with HTML or CSS. Hugo also contains a built in preview mode which runs a small webserver on your local machine and automatically rebuilds the site when it detects changes, which makes the iterative process of content creation as easily as it can possibly be. As soon as you save a file, the local server updates the page in your browser, so you see changes as soon as you hit &lsquo;save&rsquo;. And making content changes is also faster because you don&rsquo;t have to wait for a database query for pages to load as you click through a CMS system.</p>
+<br>
+<p>I spent a few hours tinkering with the configuration, then another few hours building the navigation and putting in the main pages and first few blog posts. Some of this stuff I could copy from the previous site so I saved a bit of time there, but most of the content was original. I&rsquo;m pretty impressed with being able to build a whole functional website in eight hours. Now I&rsquo;m <strong>completely</strong> satisfied with the look and feel (which hasn&rsquo;t happened to me in a long time) and just need to add some more social media accounts to the config and I&rsquo;ll be done. From then on, I can just focus on creating content, instead of spending time tweaking small glitches every time I go to add a blog post.</p>
+<br>
+<p>One of the biggest things I love about Hugo is that there are a lot (several hundred) of <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer ">distinctive themes</a>, and with barely any custom configuration you can get an incredibly crisp, clean looking website. I&rsquo;m not a graphic designer, so I build websites that have just enough visual pop but are mostly filled with informative text. Hugo is great for this model (though you can use it to build graphics-heavy sites too, if you want). I think the site looks super professional without being overloaded with bells and whistles, which was exactly what I was going for. I find a lot of javascript-heavy websites built in react and other frameworks to be visually overwhelming, and for my needs Hugo strikes a perfect balance.</p>
+<br>
+<p>While Hugo is a fantastic tool, it&rsquo;s not for everyone or every use case. There are some limitations:</p>
+<ul>
+<li>You can&rsquo;t build whole applications. While you can set up multiple layouts to incorporate a blog or other presentation formats, there&rsquo;s no database for dynamic content. You couldn&rsquo;t run a full-fledged e-commerce site with Hugo, for example.</li>
+<li>It&rsquo;s not a CMS. While markdown does make it easy to quickly create formatted content, you don&rsquo;t have full WYSIWYG capability for menus or articles. With WordPress or Joomla or other CMS tools, you can maintain a site while knowing nothing about HTML or CSS. Once the site is installed, you can build menus and pages through a visual editor. That&rsquo;s not possible with Hugo.</li>
+<li>You need a bit of web knowledge to make it work. Related to the above point, Hugo isn&rsquo;t for total web neophytes. While you don&rsquo;t need anything like proficiency with the command line (there&rsquo;s only a couple of commands required to use Hugo), if you&rsquo;re not a bit familiar with the basics of web and comfortable editing config files, you might have a tough time getting started. But if you have even a tiny bit of the hacker in you, Hugo might be right up your alley. And if your web knowledge is basic but you want to learn more, Hugo might be perfect for you.</li>
+</ul>
+<br>
+<p>So the bottom line is that I can recommend Hugo wholeheartedly. It&rsquo;s not for everyone, but for a lot of use cases it&rsquo;s an amazing solution that avoids a lot of the problems of other website building methods. It&rsquo;s also free, open-source, and has a big ecosystem of users, themes, and support.</p>
+<br>
+<p>For my own website needs, it&rsquo;s hard to see going back to Joomla. If I had a web client that wanted a CMS site that would support e-commerce, for example, I might still recommend Joomla (with a few reservations). But for a simple. ultra-clean professional services site with blog support, Hugo is really hard to beat. It&rsquo;s free, and if you have some basic web skills, Hugo makes it insanely easy to quickly build and configure a site and populate it with content.</p>
+<br>
+<p>There&rsquo;s always the minor issue of getting your content onto a server, since unlike with a CMS you can&rsquo;t just click the &lsquo;save&rsquo; button in the editor and have the content update on the live site automatically. It&rsquo;s possible to have your website files live in a GitHub or other source control repo and <a href="https://blog.notmet.net/2020/02/deploying-github-to-dreamhost/" target="_blank" rel="noopener noreffer ">configure an automated process</a> with your web host to upload the changes whenever you push to the repo. If you were doing frequent content updates, you&rsquo;d probably want to do that. Since I&rsquo;ll probably only be making one new blog post per week or so, for now I&rsquo;ll just stick with the old fashioned method of firing up my FTP client and uploading the new file when I need to make a change. But be aware that you can, with some setup, automate that process.</p>
+<br>
+<p>Two thumbs up for Hugo! I have never been happier with the appearance and functionality of one of my own professional websites - not even close!. Hugo has made building websites fun again, and that&rsquo;s a great feeling.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.nwdataconsulting.com/posts/joomla-to-hugo/" data-title="Joomla to Hugo"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.nwdataconsulting.com/posts/joomla-to-hugo/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.nwdataconsulting.com/posts/joomla-to-hugo/" data-title="Joomla to Hugo"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.nwdataconsulting.com/posts/joomla-to-hugo/" data-title="Joomla to Hugo"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.nwdataconsulting.com/posts/joomla-to-hugo/" data-title="Joomla to Hugo"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/bigquery-cost-control/" class="prev" rel="prev" title="Bigquery Cost Control"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Bigquery Cost Control</a>
+            <a href="/posts/data-analytics-science-engineering/" class="next" rel="next" title="What&#39;s the relationship between data analytics, data science, and data engineering?">What's the relationship between data analytics, data science, and data engineering?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div align = "center">
+                
+            </div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-FJB4XW60Y0', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-FJB4XW60Y0" async></script></body>
+</html>

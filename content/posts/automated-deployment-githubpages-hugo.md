@@ -44,11 +44,11 @@ I did, well, just what the title suggests, creating an alias to pack the most co
 
 git config --global alias.acp '!f() { git add -A && git commit -m "$@" && git push; }; f'
 
-and replace 'acp' with your chosen alias, you can compress multiple git commands into one. Now whenever I have modified files and I want to push the changes to GitHub, all I have to do is run:
+and replace 'acp' with your chosen alias, you can can tell git to compress multiple git commands into one. Now whenever I have modified files and I want to push the changes to GitHub, all I have to do is run:
 
 `git acp "my commit message"`
 
-and provide a relevant commit message. That's it! Shortening three commands (add, commit, push), is a small time savings but it adds up over time when you're pushing frequent updates. So now when I have new content I just have to do `git acp` and git automatically adds the updated files to the local HEAD, commits the changes, pushes those changes to the remote repository, then (on the GitHub server side) performs the Hugo build and deploys the updates. That's a pretty slick workflow.
+and provide a relevant commit message. That's it! Shortening three commands (add, commit, push), is a small time savings but it adds up over time when you're pushing frequent updates. So now when I have new content I just have to do `git acp` with a commit message and git automatically adds the updated files to the local HEAD, commits the changes, pushes those changes to the remote repository, then (on the GitHub server side) performs the Hugo build and deploys the updates. That's a pretty slick workflow.
  
 ### Choosing Between Github Deployment Options
  
@@ -75,6 +75,26 @@ This build progress page shows you an overview with the action number (22), the 
 ![GitHub Actions progress update](../../github-actions-detailed-progress.png). 
 
 We can assume that behind the scenes GitHub is spinning up a Docker container with a Linux machine to perform the deployment. If we clicked on 'Operating System' and 'Runner image' we would get more details here. You get some detailed deployment actions and confirmation that the deployment has been completed. Once you have your workflow set up, tested, and working correctly, it shouldn't be necessary to look at these deployment action details very often (or ever). But if you do run into deployment issues, this progress page is where you can go for details that will help you troubleshoot whatever is going on. 
+
+### Using Commit History For Troubleshooting
+
+There's another aspect of this automated deployment setup that I really like, and that's keeping a clear record of the update/commit history to the site. This can be very useful when performing troubleshooting. Usually when you make a site update (particularly involving site or theme configuration), it is immediately clear if this change breaks something. If you make an errant configuration change, this typically manifests itself as a broken logo image or some other such obvious error in the rendered site. But that's not always the case. Sometimes you make an update, and you don't realize until later that, somewhere along the line, something got broken (particularly with site and theme configuration changes, which can interact in unexpected ways). And when you run into these issues where no immediate solution presents itself, troubleshooting can be *very* frustrating and time-consuming. Ever spend half a day tracking down a problem that just came down to one small change in one configuration file that you made hours ago and then forgot about? A change whose actual fix, once identified, takes literally just seconds, but anyone doing any serious web development work has experienced this incredibly frustrating situation at some point, where it takes hours to identify a problem that can be fixed with a few keystrokes. 
+
+Automated deployment with Pages / Actions, in combination with descriptive commit messages, provides a powerful tool for tracking down errors in the site build. Let's say I'm working on the site, clicking through pages, and I realize that something is awry. Usually in this case you think of the most recent commit as the culprit, but what if the most recent change could not have been responsible for the problem you're seeing? In that case what do you do? Without a clear record of what was changed and when, you have to go through your own mental list of recent changes to isolate the culprit. If you aren't using automated deployment with Actions (or some other tool), you don't really have an easy way to do this. Server logs will tell you when a file was updated, but won't show you the content of the update, so you're purely reliant on your own memory and clicking around to look at all the possible sources of the problem. If you're in a phase of making frequent content updates, this can be difficult. What if you've made twenty commits in the last two days? No one can remember the details of all those changes. And that's just for a lowly single-proprietor website - what if you have a more complex site that's being developed by multiple people simultaneously?
+
+The commit history stored by GitHub Actions (which we are using for automated site build and deployment) can be a powerful tool for simplifying this sort of troubleshooting. This is one reason why it's important to follow the rule of [*commit frequently, push often*](https://medium.com/nerd-for-tech/commit-frequently-push-often-2ba996307a3f) (or I might phrase it as *perform a push with every commit*).  That way, in the context of a GitHub Pages deployment with Hugo, you have exactly one commit for every automated build/deploy of the site. Combine that with using meaningful commit messages (i.e. 'added logo image to footer partial' rather than 'updated footer' or no commit message at all). If you follow this set of practices, your GitHub Actions log can quickly provide a lot of information about what was updated where and when:
+
+![GitHub Actions commit history](/github-actions-commit-history.png)
+
+This is one of the oustanding things about GitHub and why so many developers use it as an integral part of their process. Look at how much information you can see in just that one page: 
+
+- a compact list of all your workflow runs with the newest first
+- for each run, brief deployment details, a commit number, deployment branch, how long ago the deployment was performed, and how long the deployment took to complete
+- from there, you can click into a branch or a commit to see further details about the
+
+Let's see I'm interested in the last deployment action in the list in the above image ('replaced front logo with avatar'). If I click into the commit details (by clicking on the commit number - `377218e ` under the action), then GitHub takes me to the commit details page:
+
+![GitHub commit details page](/github-commit-details-page.png)
 
 # Summary
 

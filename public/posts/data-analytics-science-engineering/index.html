@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>What&#39;s the relationship between data analytics, data science, and data engineering? - Northwest Data Consulting - Guy Cutting</title><meta name="Description" content="Data analytics, science, engineering, web, cloud, simulation, modeling consulting services in the pacific northwest and beyond"><meta property="og:title" content="What&#39;s the relationship between data analytics, data science, and data engineering?" />
+<meta property="og:description" content="This diagram is helpful for visualizing the relationship between data engineering, data science, and the business stakeholders. Thanks to David Holm on Twitter.
+A subject that is sometimes the source of ambiguity and confusion is the relationship between data analytics, data science, and data engineering. Increasingly common usage of such terms such as data analytics engineering, business intelligence engineering, and others can make it even more unclear where the boundaries between these categories and roles actually lie." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/" /><meta property="og:image" content="https://www.nwdataconsulting.com/GDC-logo-web-trans.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-11T19:21:44-07:00" />
+<meta property="article:modified_time" content="2023-04-11T19:21:44-07:00" /><meta property="og:site_name" content="Northwest Data Consulting" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.nwdataconsulting.com/GDC-logo-web-trans.png"/>
+
+<meta name="twitter:title" content="What&#39;s the relationship between data analytics, data science, and data engineering?"/>
+<meta name="twitter:description" content="This diagram is helpful for visualizing the relationship between data engineering, data science, and the business stakeholders. Thanks to David Holm on Twitter.
+A subject that is sometimes the source of ambiguity and confusion is the relationship between data analytics, data science, and data engineering. Increasingly common usage of such terms such as data analytics engineering, business intelligence engineering, and others can make it even more unclear where the boundaries between these categories and roles actually lie."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/" /><link rel="prev" href="https://www.nwdataconsulting.com/posts/joomla-to-hugo/" /><link rel="next" href="https://www.nwdataconsulting.com/posts/data-driven-meaning/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What's the relationship between data analytics, data science, and data engineering?",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.nwdataconsulting.com\/posts\/data-analytics-science-engineering\/"
+        },"genre": "posts","wordcount":  614 ,
+        "url": "https:\/\/www.nwdataconsulting.com\/posts\/data-analytics-science-engineering\/","datePublished": "2023-04-11T19:21:44-07:00","dateModified": "2023-04-11T19:21:44-07:00","publisher": {
+            "@type": "Organization",
+            "name": "","logo": "https:\/\/www.nwdataconsulting.com\/nwdataconsulting\/GDC-logo-web-trans.png"},"author": {
+                "@type": "Person",
+                "name": "Guy Cutting"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Northwest Data Consulting - Guy Cutting"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/GDC-logo-web-trans.png"
+        data-srcset="/GDC-logo-web-trans.png, /GDC-logo-web-trans.png 1.5x, /GDC-logo-web-trans.png 2x"
+        data-sizes="auto"
+        alt="/GDC-logo-web-trans.png"
+        title="/GDC-logo-web-trans.png" />Northwest Data Consulting</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Northwest Data Consulting Home"><i class="fa fa-home"></i> Home </a><a class="menu-item active" href="/posts/" title="Posts"><i class="fa fa-blog"></i> Blog </a><a class="menu-item" href="/mission/" title="Mission"><i class="fa fa-heart"></i> Mission </a><a class="menu-item" href="/services/" title="Services"><i class="fa fa-cloud"></i> Services </a><a class="menu-item" href="/soundtrack/" title="Soundtrack"><i class="fa fa-music"></i> Soundtrack </a><a class="menu-item" href="/contact"><i class="fa fa-phone"></i> Contact </a><a class="menu-item" href="/about"><i class="fa fa-user"></i> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Northwest Data Consulting - Guy Cutting"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/GDC-logo-web-trans.png"
+        data-srcset="/GDC-logo-web-trans.png, /GDC-logo-web-trans.png 1.5x, /GDC-logo-web-trans.png 2x"
+        data-sizes="auto"
+        alt="/GDC-logo-web-trans.png"
+        title="/GDC-logo-web-trans.png" />Northwest Data Consulting</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="Northwest Data Consulting Home"><i class="fa fa-home"></i>Home</a><a class="menu-item" href="/posts/" title="Posts"><i class="fa fa-blog"></i>Blog</a><a class="menu-item" href="/mission/" title="Mission"><i class="fa fa-heart"></i>Mission</a><a class="menu-item" href="/services/" title="Services"><i class="fa fa-cloud"></i>Services</a><a class="menu-item" href="/soundtrack/" title="Soundtrack"><i class="fa fa-music"></i>Soundtrack</a><a class="menu-item" href="/contact" title=""><i class="fa fa-phone"></i>Contact</a><a class="menu-item" href="/about" title=""><i class="fa fa-user"></i>About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">What's the relationship between data analytics, data science, and data engineering?</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Guy Cutting</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-11">2023-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;614 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/data-scientist-engineer-diagram.png"
+        data-srcset="/data-scientist-engineer-diagram.png, /data-scientist-engineer-diagram.png 1.5x, /data-scientist-engineer-diagram.png 2x"
+        data-sizes="auto"
+        alt="/data-scientist-engineer-diagram.png"
+        title="Venn Diagram of Data Engineering, Data Science, and Business Stakeholders" /></p>
+<p>This diagram is helpful for visualizing the relationship between data engineering, data science, and the business stakeholders. Thanks to <a href="https://twitter.com/cloudpreacher" target="_blank" rel="noopener noreffer ">David Holm on Twitter</a>.</p>
+<p>A subject that is sometimes the source of ambiguity and confusion is the relationship between data analytics, data science, and data engineering. Increasingly common usage of such terms such as <em>data analytics engineering</em>, <em>business intelligence engineering</em>, and others can make it even more unclear where the boundaries between these categories and roles actually lie.</p>
+<p><em>Analytics</em> can be used in a couple of ways. It is often used in a very general way to refer to the entire process of working with data, from start to finish. In that general sense, <em>analytics</em> incorporates data science and data engineering. But <em>analytics</em>  can also be used more specifically to refer to the process of building reports from data that has already been ingested and transformed (a process which usually requires several steps.) Thus the <em>data analyst</em> role is often restricted to the &lsquo;front end&rsquo; of the process, which involves writing queries that retrieve the appropriate data in the form needed for particular reports.</p>
+<p><em>Analytics</em> and <em>data science</em> are often used interchangably, and there is quite a bit of overlap, but it is important to understand the differences between the two terms.</p>
+<p>Understanding <em>data engineering</em> helps put a finer point on the general vs. specific meanings of the term <em>analytics</em>. <em>Data engineering</em> is concerned with building the data infrastructure required for effective analytics. In this sense, data engineering is necessary to analytics, but is a largely separate area of concern. Data engineers work on the &lsquo;back end&rsquo;, meaning the part of the process dealing with the systems for ingesting, storing, processing, and otherwise preparing data for consumption into analytics reports. Data engineers make choices about what tools are necessary for various steps of the process, and how to make them work together. A data engineer might assess a use case and determine that a MySQL database is needed for the application data, that an analytical database like Redshift is needed to store processed data and deliver it for reporting. The data engineer configures these tools and the connections between them, and is also responsible for building the data pipelines which ingest and process data from a raw form into a form which is easily consumable. Tools like <a href="https://www.getdbt.com/" target="_blank" rel="noopener noreffer ">dbt</a> are used to perform ETL (Extract Transform Load) processes which take raw data (often from multiple disparate sources), and combine and process them through several steps to yield refined data which can more easily be queries by data analysts and scientists.</p>
+<p>In an organization with a healthy data culture, these roles are well-defined and each person works in a particular part of the overall data process. Employees in these roles will always work closely together, and sometimes there is crossover between who performs what tasks. But in a well-functioning data culture, the responsibilities of each role are clearly delineated. Ideally, for example, data engineers focus on building infrastructure that processes data to a point where it is readily queryable and consumable by reports built by analysts.</p>
+<br>
+<p>One sign of an unhealthy data culture is when the boundaries between roles are murky, and there are not clear expectations about who handles what part of the process. In one case study from my own experience, the data analyst did not have the appropriate skills for the analytical database being used (Redshift). This meant that the data engineer was often asked to write queries for reports, and build the reports in Tableau (tasks which are more properly the responsibility of the analyst). The article <a href="https://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/" target="_blank" rel="noopener noreffer "><em>Engineers Shouldn&rsquo;t Write ETL</em></a> gives some great information about where these boundaries should ideally be drawn.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-04-11</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/" data-title="What&#39;s the relationship between data analytics, data science, and data engineering?"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/" data-title="What&#39;s the relationship between data analytics, data science, and data engineering?"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/" data-title="What&#39;s the relationship between data analytics, data science, and data engineering?"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/" data-title="What&#39;s the relationship between data analytics, data science, and data engineering?"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/joomla-to-hugo/" class="prev" rel="prev" title="Joomla to Hugo"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Joomla to Hugo</a>
+            <a href="/posts/data-driven-meaning/" class="next" rel="next" title="What does it mean to be &#39;data-driven&#39;?">What does it mean to be 'data-driven'?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div align = "center">
+                
+            </div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-FJB4XW60Y0', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-FJB4XW60Y0" async></script></body>
+</html>
