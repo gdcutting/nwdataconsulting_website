@@ -4,7 +4,7 @@ title: Northwest Data Consulting Home
 
 Welcome to Northwest Data Consulting. We provide consulting services focused on data analytics, engineering AI, and machine learning in the Pacific Northwest and beyond.
 
-## Make the most of your data
+# Make the most of your data
 
 Let's be realistic: getting the most out of your data can be difficult. These days, even many small companies are dealing with volumes that would have been considered 'big data' just a few years ago. And it's not just the volume of data which is proliferating, but the number of sources as well. You might have data for your application, HR, finance, customers, sales, project management... The average small company (fewer than 500 employees )has 172 applications in their tech stack, spends $7.9m/year on tech, and adds 4.4 new applications per month. And if you're a tech company, the data picture is even more complicated, because... Every time you add an application, the picture gets more complicated because each one of those apps might require interfacing or integration with several others, so complexity grows non-linearly with the number of applications in your stack. 
 
