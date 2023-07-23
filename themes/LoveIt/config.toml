@@ -47,7 +47,7 @@
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      logo = "/nwdataconsulting/GDC-logo-web-trans.png"
+      logo = "/GDC-logo-web-trans.png"
       # title name
       # 标题名称
       name = "Northwest Data Consulting"
