@@ -3,6 +3,7 @@ title: "Joomla to Hugo"
 date: 2023-04-10T22:57:30-07:00
 draft: false
 author: "Guy Cutting"
+tags: ["Web", "Joomla", "Hugo", "Static Site Generator", "Templates", "Themes"]
 ---
 
 ![Hugo logo](../../hugo-logo.svg)

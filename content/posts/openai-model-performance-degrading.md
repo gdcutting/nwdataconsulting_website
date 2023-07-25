@@ -3,6 +3,7 @@ title: "OpenAI Model Performance Degrading In Recent Weeks"
 date: 2023-07-23T01:33:48-07:00
 draft: false
 author: "Guy Cutting"
+tags: ["OpenAI", "AI", "Machine Learning", "Performance", "LLMs", "Security", "ChatGPT", "GPT Models"]
 ---
 
 ## ChatGPT Model Performance In Question
