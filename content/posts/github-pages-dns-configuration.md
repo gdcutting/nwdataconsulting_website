@@ -3,6 +3,7 @@ title: "Github Pages Custom Domain DNS Configuration"
 date: 2023-07-23T02:37:11-07:00
 draft: false
 author: "Guy Cutting"
+tags: ["GitHub", "DNS", "Hugo", "Domain Management", "ALIAS", "CNAME", "Web", "Cloud"]
 ---
 
 I'm thrilled to find an [ideal set up for this site](../automated-deployment-githubpages-hugo), which uses GitHub Pages for hosting and GitHub Actions for automated build and deployment. There was one last piece to the puzzle of finally launching the site, and that was configuring the custom DNS with GitHub Pages. When Pages hosts your site, it does so by default at a URL like [https://gdcutting.github.io/nwdataconsulting/](https://gdcutting.github.io/nwdataconsulting/). There's nothing wrong with that URL as-is, but for branding a business, we obviously want a top-level domain that reflects the business name (like [https://www.nwdataconsulting.com](https://www.nwdataconsulting.com)).
