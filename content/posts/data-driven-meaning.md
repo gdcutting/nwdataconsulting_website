@@ -3,6 +3,7 @@ title: "What does it mean to be 'data-driven'?"
 date: 2023-04-12T17:59:56-07:00
 draft: false
 author: "Guy Cutting"
+weight: 1
 ---
 
 ## Introduction
