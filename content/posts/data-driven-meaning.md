@@ -4,6 +4,7 @@ date: 2023-04-12T17:59:56-07:00
 draft: false
 author: "Guy Cutting"
 weight: 1
+tags: ["Data", "Data-driven", "Culture", "Organization"]
 ---
 
 ## Introduction
