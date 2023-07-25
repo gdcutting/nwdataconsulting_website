@@ -6,7 +6,7 @@ theme = "LoveIt"
 
 [params]
   # Sets the meta tag description
-  description          = "Data analytics, science, engineering, web, cloud, simulation, modeling consulting services in the pacific northwest and beyond"
+  description          = "Data analytics, data science, data engineering, web, cloud, simulation, modeling consulting services in oregon, the pacific northwest and beyond"
   # Sets the navbarTitle that appears in the top left of the navigation bar
   navbarTitle          = "Guy Cutting - Data Consulting"
   # Sets where "View More Posts" links
