@@ -3,6 +3,7 @@ title: "Automated Hugo Deployment using GitHub Pages"
 date: 2023-07-19T19:12:11-07:00
 draft: false
 author: "Guy Cutting"
+tags: ["GitHub", "Hugo", "Static Site Generator", "Automation", "Deployment", "Git", "Workflow"]
 ---
 # Overview
 
