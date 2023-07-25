@@ -10,7 +10,7 @@ OpenAI has been making all sorts of headlines in recent months after its breakth
 
 But serious questions are already emerging about the long-term trajectory of the company and its flagship chat models. User data from May and June showed a [ten percent drop in user base from month to month](https://arstechnica.com/tech-policy/2023/07/chatgpts-user-base-shrank-after-openai-censored-harmful-responses/). There is speculation that this drop is due to the end of the spring college term, and speaks to the fact that a significant portion of the ChatGPT user base is college students using the tool for research (and to cheat, though some argue that teachers should [use ChatGPT as a tool to work with rather than against](https://www.nytimes.com/2023/01/12/technology/chatgpt-schools-teachers.html)).
 
-Related to this drop in user base is another, perhaps more concerning, set of question related to the performance of the newer versions of the ChatGPT models. In the last couple of weeks there has been a lot of good reporting which appears to confirm a phonemenon that users had already been reporting: that the performance of the newer versions of the model is actually worse than the previous versions. 
+Related to this drop in user base is another, perhaps more concerning, set of questions related to the performance of the newer versions of the ChatGPT models. In the last couple of weeks there has been a lot of good reporting which appears to confirm a phonemenon that users had already been reporting: that the performance of the newer versions of the models is actually worse than the previous versions. This includes comparisons between various versions of GPT3.5 and between versions of GPT3.5 and GPT4.
 
 ### New Research Paper Quantifies Performance Changes
 
