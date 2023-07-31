@@ -1,7 +1,7 @@
 ---
 title: "Chat AI Prompt Engineering - Part 1 (Intro and Spark Example)"
 date: 2023-07-25T05:40:49-07:00
-draft: true
+draft: false
 Author: "Guy Cutting"
 tags: ["ChatGPT", "Google Bard", "Chat bots", "AI", "GPT models", "Prompt Engineering", "OpenAI"]
 ---
