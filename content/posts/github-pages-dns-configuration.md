@@ -47,6 +47,6 @@ I was thrown off by the redirect part, because I thought that might be handled o
 
 You can also set up additional subdomains (like blog.nwdataconsulting.com). I'll skip those details here because the GitHub docs linked above do a good job with that. 
 
-Another thing to note (and another perk of using GitHub Pages), is that you get a secure certicate for your site (to make the https:// version accessible and get that oh-so-necessary lock icon in the browser when people visit). You just have to click the 'Enforce HTTPS' box in the Pages settings and GitHub handles this all for you. You can
+Another thing to note (and another perk of using GitHub Pages), is that you get a secure certicate for your site (to make the https:// version accessible and get that oh-so-necessary lock icon in the browser when people visit). You just have to click the 'Enforce HTTPS' box in the Pages settings and GitHub handles this all for you.
 
 That's the last piece of the puzzle to launching the site. Now I have a site that automatically builds and quickly deploys my content changes to my custom subdomain with HTTPS built in. Especially for a free hosting option, it's really hard to beat that. 
