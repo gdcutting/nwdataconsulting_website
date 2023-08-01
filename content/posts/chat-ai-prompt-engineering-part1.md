@@ -54,8 +54,6 @@ I tried out a couple of different versions of this prompt; I'm giving the finali
 
 Here's the response:
 
------
-
 >Sure, I can provide you with a basic PySpark program that reads a text file and counts the number of words using a lambda function. Make sure you have
 >PySpark installed and set up in your Google Cloud Platform environment before running the code.
 >
@@ -104,8 +102,6 @@ Here's the response:
 >Replace `'<cluster-name>'` with the name of your Dataproc cluster.
 >
 >Please note that this is just a basic example to get you started. Depending on your specific requirements and the size of your data, you may need to >adjust the code and configuration accordingly.
-
------
 
 ### Analysis (ChatGPT)
 
