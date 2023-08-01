@@ -160,7 +160,7 @@ Obviously I was pretty happy with ChatGPT's response to my prompt about a PySpar
 
 I give this answer an **A-**.
 
-Bard also gave a concise code snippet that worked as-is and produced the desired output. But there are some obvious differences in structure and approach, even though ]the output produced by the code from these separate responses is essentially identical - a couple of notifications and a word/count list. But even to someone who isn't very knowledgable about coding, it should be apparent that, among other things, Bard's response is simplore. Now that's not necessarily a bad thing, and can sometimes be a recommendation. But in this case, the simplicity of Bard's response is a sign of a lower-quality response. Here's the list of key differences I notice, with more detailed comments to follow:
+Bard also gave a concise code snippet that worked as-is and produced the desired output. But there are some obvious differences in structure and approach, even though the output produced by the code from these separate responses is essentially identical - a couple of notifications and a word/count list. But even to someone who isn't very knowledgable about coding, it should be apparent that, among other things, Bard's response is simplore. Now that's not necessarily a bad thing, and can sometimes be a recommendation. But in this case, the simplicity of Bard's response is a sign of a lower-quality response. Here's the list of key differences I notice, with more detailed comments to follow:
 
 1. ChatGPT's imports were more concise and specific
 2. ChatGPT followed typical modularization best practice, packaging the word count into a separate function
