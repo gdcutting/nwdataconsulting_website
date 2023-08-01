@@ -67,7 +67,7 @@ Here's the response:
 >
 >```python
 >from pyspark.sql import SparkSession
->>
+>
 >def word_count(file_path):
 >    # Create a SparkSession
 >    spark = SparkSession.builder.appName("WordCount").getOrCreate()
@@ -80,8 +80,8 @@ Here's the response:
 >    word_counts_rdd = words_rdd.map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
 >
 >    # Collect the results and print them
->   word_counts = word_counts_rdd.collect()
-        >    for word, count in word_counts:
+>    word_counts = word_counts_rdd.collect()
+>    for word, count in word_counts:
 >        print(f"{word}: {count}")
 >
 >    # Stop the SparkSession
