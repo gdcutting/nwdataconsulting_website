@@ -81,7 +81,7 @@ Here's the response:
 >
 >    # Collect the results and print them
 >   word_counts = word_counts_rdd.collect()
->    for word, count in word_counts:
+        >    for word, count in word_counts:
 >        print(f"{word}: {count}")
 >
 >    # Stop the SparkSession
@@ -101,7 +101,7 @@ Here's the response:
 >
 >```gcloud dataproc jobs submit pyspark --cluster <cluster-name> word_count.py```
 >
->Replace <cluster-name> with the name of your Dataproc cluster.
+>Replace `'<cluster-name>'` with the name of your Dataproc cluster.
 >
 >Please note that this is just a basic example to get you started. Depending on your specific requirements and the size of your data, you may need to >adjust the code and configuration accordingly.
 
@@ -274,7 +274,7 @@ and assured me that
 
 I decided to run the error down and see if Bard could fix its own error if I took a little bit of time to work through the situation. That was because I had run into this problem with GPT models before and have sometimes been able to find a working solution without too much trouble by being persistent with the bot. I tried the suggested change (adding the explicit conversion to RDD), but got another error. Over the next twenty minutes or so, I continued this cycle, following suggested changes, and each time getting a new error in response (along with a confident assurance that the most recent suggested code change would fix the problem). After a little while I felt like I was wasting time, since I already had a working version of the code from a different prompt, and was more concerned with the rest of the details of my Spark project and this article. 
 
-This less specific prompt, then, revealed a more significant difference in response between ChatGPT and Bard. With a detailed and specific prompt (first version given above), both ChatGPT and Bard were able to give working answers that more or less gave me what I needed, though ChatGPT scored numerous extra points for consistently following programming best practices. But when I was somewhat vague and did not provide as much prompt detail, Bard was not able to provide a working answer, while ChatGPT still gave a very solid error (though with a somewhat different approach due to the lack of more detailed instruction).
+This less specific prompt, then, revealed a more significant difference in response between ChatGPT and Bard. With a detailed and specific prompt (first version given above), both ChatGPT and Bard were able to give working answers that more or less gave me what I needed, though ChatGPT scored numerous extra points for consistently following programming best practices. But when I was somewhat vague and did not provide as much prompt detail, Bard was not able to provide a working answer, while ChatGPT still gave a very solid answer (though with a somewhat different approach due to the lack of more detailed instruction).
 
 ### ChatGPT Version
 

@@ -65,3 +65,5 @@ Step 6: And there you have it! We have proved that the sum of all angles in a tr
 This proof works for any type of triangle (scalene, isosceles, or equilateral) because it relies on the parallel line property and the fact that the sum of angles in any triangle is 180 degrees.
 
 [make sure not to use the same fact in the proof]
+
+As we can see, this prompt almost immediately requires some revision because both ChatGPT and Bard were pretty quick to make use, in the proofs, of the fact that the sum of angles in a triangle is 180 degrees (which, being the fact that we are trying to prove, is not admissible in the internal reasoning of the proof, because this creates circular logic)
