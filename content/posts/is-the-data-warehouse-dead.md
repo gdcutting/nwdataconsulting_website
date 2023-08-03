@@ -1,7 +1,7 @@
 ---
 title: "Is the Data Warehouse Dead?"
 date: 2023-08-01T22:34:56-07:00
-draft: false
+draft: false 
 author: "Guy Cutting"
 tags: ["Data Warehouse", "Data Management", "Amazon Redshift", "AWS", "Snowflake", "DataBricks", "Delta Lake", "Data Lake", "Analytics"]
 categories: ["Data Architecture"]
