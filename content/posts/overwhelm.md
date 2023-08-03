@@ -3,7 +3,7 @@ title: "Overwhelmed by data?"
 date: 2023-04-14T16:43:28-07:00
 draft: false
 author: "Guy Cutting"
-tags: ["Data", "Data-driven", "Culture", "Organization"]
+tags: ["Data", "Data-driven", "Culture", "Organization", "Data Management"]
 categories: ["Data Studies"]
 ---
 

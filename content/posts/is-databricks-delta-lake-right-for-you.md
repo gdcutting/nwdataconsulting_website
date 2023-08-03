@@ -3,7 +3,7 @@ title: "Are Databricks and Delta Lake Right for You?"
 date: 2023-08-01T11:48:04-07:00
 draft: true
 author: "Guy Cutting"
-tags: ["DataBricks", "Delta Lake", "Lakehouse", "Data Architecture", "Data warehouse", "Data Lake", "Databases", "ACID", "Transactions", "Business Intelligence", "Cloud Storage", "Data Processing", "Batch Data", "Streaming Data"]
+tags: ["DataBricks", "Delta Lake", "Lakehouse", "Data Architecture", "Data warehouse", "Data Lake", "Databases", "ACID", "Transactions", "Business Intelligence", "Cloud Storage", "Data Processing", "Batch Data", "Streaming Data", "Data Management"]
 categories: ["Data Architecture"]
 ---
 

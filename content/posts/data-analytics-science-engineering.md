@@ -3,7 +3,7 @@ title: "What's the relationship between data analytics, data science, and data e
 date: 2023-04-11T19:21:44-07:00
 draft: false
 author: "Guy Cutting"
-tags: ["Data", "Data Science", "Data Engineering", "Data Analysis", "Analytics", "ETL"]
+tags: ["Data", "Data Science", "Data Engineering", "Data Analysis", "Analytics", "ETL", "Data Management"]
 ---
 
 ![Venn Diagram of Data Engineering, Data Science, and Business Stakeholders](/data-scientist-engineer-diagram.png)
