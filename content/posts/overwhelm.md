@@ -4,6 +4,7 @@ date: 2023-04-14T16:43:28-07:00
 draft: false
 author: "Guy Cutting"
 tags: ["Data", "Data-driven", "Culture", "Organization"]
+categories: ["Data Studies"]
 ---
 
 I recently came across a couple of articles that raise a common issue that organizations must address in dealing with their data: being overwhelmed. Here's the first piece:

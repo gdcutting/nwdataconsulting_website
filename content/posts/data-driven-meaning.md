@@ -5,6 +5,7 @@ draft: false
 author: "Guy Cutting"
 weight: 1
 tags: ["Data", "Data-driven", "Culture", "Organization"]
+categories: ["Data Studies"]
 ---
 
 ## Introduction

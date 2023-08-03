@@ -5,7 +5,7 @@
 
     <div class="page home"{{ if ne $posts.enable false }} data-home="posts"{{ end }}>
         {{- /* Profile */ -}}
-        {{- if ne $profile.enable false -}}
+        {{- if and (ne $profile.enable false) (gt .Paginator.PageNumber 2) -}}
             {{- partial "home/profile.html" . -}}
         {{- end -}}
 

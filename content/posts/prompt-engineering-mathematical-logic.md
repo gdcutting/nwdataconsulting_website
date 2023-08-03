@@ -2,6 +2,7 @@
 title: "Prompt Engineering Mathematical Logic"
 date: 2023-07-31T06:05:30-07:00
 draft: true
+tags: ["Data"]
 ---
 
 This post is Part 2 in a series on Prompt Engineering for AI chatbots like ChatGPT and Bard. For Part 1, see:

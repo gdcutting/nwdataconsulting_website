@@ -4,6 +4,7 @@ date: 2023-07-24T19:38:59-07:00
 draft: false
 author: "Guy Cutting"
 tags: ["Slack"]
+categories: ["News"]
 ---
 
 The Northwest Data Consulting Slack channel is now active! 

@@ -4,6 +4,7 @@ date: 2023-07-25T05:40:49-07:00
 draft: false
 Author: "Guy Cutting"
 tags: ["ChatGPT", "Google Bard", "Chat bots", "AI", "GPT models", "Prompt Engineering", "OpenAI"]
+categories: ["In Practice"]
 ---
 
 ![Apache Spark logo](/apache_spark.webp)
@@ -340,7 +341,7 @@ The difference in response when the level of detail in the prompt is low is quit
 
 There's a lot of information to be gleaned just from comparing ChatGPT and Bard on one set of mostly similar prompts. We've gone over a lot in this post, and I'm going to wrap up the detailed analysis here. But let's take a few moments to review what we discovered in this set of comparisons:
 
-- ChatGPT and Bard are both amazing tools, but ChatGPT is able to achieve a level of performance that's simply astonishing in a lot of cases. For writing code, ChatGPT is still your best friend. I have spent a lot of time with Bard, and it feels friendlier in some ways, and it has given me some pretty good code solutions. But the results of the direct and detailed comparison from this article show that ChatGPT gives noticably more and better detail, and is more likely to generate a proper working solution.
+- ChatGPT and Bard are both amazing tools, but ChatGPT is able to achieve a level of performance that's simply astonishing in a lot of cases. For writing code, ChatGPT is still your best friend. I have spent a lot of time with Bard, and it feels friendlier in some ways, and it has given me some pretty good code solutions. But the results of the direct and detailed comparison from this article show that ChatGPT gives noticably more and better detail, and is more likely to generate not just a proper working solution, but one with some elegance and which incorporates the details of recommended programming practice.
 - Proper specificity and context are essential to effective AI prompt engineering. Without giving the bot sufficient clear information to answer your request, you simply can't expect to get a very helpful answer. A little bit of information in the prompt makes a lot of difference. The difference of about a sentence's worth of information (between the more and less detailed versions of the PySpark job file prompt) made a significant difference in the character and quality of the answers. Taking a little bit of extra time obviously pays off in spades in this sort of situation. I only spent an extra minute or so adding details to the better version of the Spark prompt question, but the results were much better for that better-developed version.
 - The difference in model quality between ChatGPT and Bard shows up especially when considering the difference in prompt quality and level of detail. Bard could hang pretty close with ChatGPT when working with a detailed and specific prompt, but when working with a lower quality prompt, Bard simply wasn't able to infer enough information to give a useful (or even runnable answer). 
 
