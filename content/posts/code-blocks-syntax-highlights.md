@@ -4,6 +4,7 @@ date: 2023-08-01T14:57:29-07:00
 draft: true
 author: "Guy Cutting"
 tags: ["Web", "Hugo", "GitHub", "Markdown"]
+Categories: ["In Practice"]
 ---
 
 I've really been enjoying developing this new website, learning some new tools and skills and getting a chance to work in more depth with some that I had already used in the past. I've posted a few articles discussing the process of developing and deploying the site, because even though that discussion is a little off-topic from my data consulting work proper, I think there are others like me who might find some of this information useful. Though I'm not primarily a web developer anymore, I spend over a decade building websites for a living, and I still really enjoy doing it. In fact, I think I enjoy building sites *more* now because, since it's not my primary job, I can focus more on getting exactly what I (instead of my web clients) want out of the site, and I have a chance to try to things that I wouldn't if I was filling orders for clients. 

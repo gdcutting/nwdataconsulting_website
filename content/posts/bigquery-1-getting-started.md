@@ -3,7 +3,7 @@ title: "BigQuery Part 1: Getting Started"
 date: 2020-04-23T20:08:17-07:00
 draft: false
 tags: ["Google Cloud Platform", "Cloud", "BigQuery", "SQL", "Python", "Big Data"]
-category: ["Data Science"]
+categories: ["Data Science"]
 ---
 
 BigQuery, one of the many services available on Google Cloud Platform, is an enterprise data warehouse which lets you perform fast queries on very large datasets using Google's infrastructure. You can get started using it free of charge with one of the many publicly available datasets built into GCP.

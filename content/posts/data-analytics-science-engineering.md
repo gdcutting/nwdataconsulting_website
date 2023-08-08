@@ -4,6 +4,7 @@ date: 2023-04-11T19:21:44-07:00
 draft: false
 author: "Guy Cutting"
 tags: ["Data", "Data Science", "Data Engineering", "Data Analysis", "Analytics", "ETL", "Data Management"]
+categories: ["The Data Organization"]
 ---
 
 ![Venn Diagram of Data Engineering, Data Science, and Business Stakeholders](/data-scientist-engineer-diagram.png)
