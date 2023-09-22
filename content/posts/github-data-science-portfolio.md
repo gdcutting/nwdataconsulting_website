@@ -4,6 +4,7 @@ date: 2023-09-21T19:57:33-07:00
 draft: false
 author: "Guy Cutting"
 tags: ["Data Science", "Machine Learning", "Portfolio", "GitHub", "Python", "Jupyter"]
+categories: ["Portfolio"]
 ---
 
 I'm beginning to post my data science portfolio on GitHub. Here's the link:
