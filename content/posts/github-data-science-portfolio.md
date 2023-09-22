@@ -1,7 +1,7 @@
 ---
 title: "Github Data Science Portfolio"
 date: 2023-09-21T19:57:33-07:00
-draft: true
+draft: false
 author: "Guy Cutting"
 tags: ["Data Science", "Machine Learning", "Portfolio", "GitHub", "Python", "Jupyter"]
 ---
