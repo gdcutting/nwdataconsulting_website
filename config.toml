@@ -29,11 +29,16 @@ theme = "LoveIt"
   name = 'Home'
   pageRef = '/'
   pre = '<i class="fa fa-home"></i>'
-  weight = 10
+  weight = 0
 [[menu.main]]
   name = 'Blog'
   pageRef = '/posts/'
   pre = '<i class="fa fa-blog"></i>'
+  weight = 10
+[[menu.main]]
+  name = 'Reading'
+  pageRef = '/reading/'
+  pre = '<i class="fa fa-book"></i>'
   weight = 20
 [[menu.main]]
   name = 'Mission'
