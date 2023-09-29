@@ -8,5 +8,5 @@ layout: "single"
 Here you will find a curated collection of resources related to artificial intelligence, machine learning, analytics, data science, systems science, data engineering, and related topics. This collection is broken into three categories, by length/format: 
 
 - <font size = "5"><u>Books</u></font>
-- <font size = "5"><u>Papers</u></font>
+- <font size = "5"><u>[Papers](papers/)</u></font>
 - <font size = "5"><u>Articles</u></font>
