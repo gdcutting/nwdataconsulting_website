@@ -31,3 +31,13 @@ layout: "single"
         {{< /details >}}    
   - DOI: [https://doi.org/10.14778/3415478.3415560](https://doi.org/10.14778/3415478.3415560)
   - Download: [p975-armbrust.pdf](https://databricks.com/wp-content/uploads/2020/08/p975-armbrust.pdf)
+- [**Dremel: Interactive Analysis of Web-Scale Datasets**](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
+  - Year: 2010
+  - Authors: Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis
+  - Abstract: 
+        {{< details "Dremel is a scalable, interactive ad-hoc query system for analy- sis of read-only nested data..." >}}
+            By combining multi-level execution trees and columnar data layout, it is capable of running aggrega- tion queries over trillion-row tables in seconds. The system scales to thousands of CPUs and petabytes of data, and has thousands of users at Google. In this paper, we describe the architecture and implementation of Dremel, and explain how it complements MapReduce-based computing. We present a novel columnar stor- age representation for nested records and discuss experiments on few-thousand node instances of the system.
+        {{< /details >}}    
+  - DOI: [https://doi.org/10.14778/1920841.1920886](https://doi.org/10.14778/1920841.1920886)
+  - Download: [36632.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
+  
