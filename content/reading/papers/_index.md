@@ -4,6 +4,7 @@ date: 2023-6-12T03:24:32-07:00
 draft: false
 author: "Guy Cutting"
 categories: ["Reading"]
+tags: ["Data Science", "Artificial Intelligence", "Machine Learning", "Research", "Models", "LLMs"]
 layout: "single"
 ---
 # Papers (oldest first)
