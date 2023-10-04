@@ -3,6 +3,7 @@ title: "Reading - Papers"
 date: 2023-6-12T03:24:32-07:00
 draft: false
 author: "Guy Cutting"
+categories: ["Reading"]
 layout: "single"
 ---
 # Papers (oldest first)
