@@ -9,6 +9,17 @@ layout: "single"
 ---
 # Papers (oldest first)
 
+This is a list of important data-related papers (primarily in AI / ML, with some others mixed in):
+
+- [**Dremel: Interactive Analysis of Web-Scale Datasets**](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
+  - Year: 2010
+  - Authors: Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis
+  - Abstract: 
+        {{< details "Dremel is a scalable, interactive ad-hoc query system for analy- sis of read-only nested data..." >}}
+            By combining multi-level execution trees and columnar data layout, it is capable of running aggrega- tion queries over trillion-row tables in seconds. The system scales to thousands of CPUs and petabytes of data, and has thousands of users at Google. In this paper, we describe the architecture and implementation of Dremel, and explain how it complements MapReduce-based computing. We present a novel columnar stor- age representation for nested records and discuss experiments on few-thousand node instances of the system.
+        {{< /details >}}    
+  - DOI: [https://doi.org/10.14778/1920841.1920886](https://doi.org/10.14778/1920841.1920886)
+  - Download: [36632.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
 - [**Attention Is All You Need**](https://arxiv.org/abs/1706.03762) (aka the very influential and important 'The Transformer Paper')
   - Year: 2017
   - Authors: Robert Geirhos, David H. J. Janssen, Heiko H. Schütt, Jonas Rauber, Matthias Bethge, Felix A. Wichmann
@@ -25,15 +36,6 @@ layout: "single"
             The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.
         {{< /details >}}    
   - Download: [1706.03762.pdf](https://arxiv.org/pdf/1706.03762.pdf)
-- [**Dremel: Interactive Analysis of Web-Scale Datasets**](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
-  - Year: 2010
-  - Authors: Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, Theo Vassilakis
-  - Abstract: 
-        {{< details "Dremel is a scalable, interactive ad-hoc query system for analy- sis of read-only nested data..." >}}
-            By combining multi-level execution trees and columnar data layout, it is capable of running aggrega- tion queries over trillion-row tables in seconds. The system scales to thousands of CPUs and petabytes of data, and has thousands of users at Google. In this paper, we describe the architecture and implementation of Dremel, and explain how it complements MapReduce-based computing. We present a novel columnar stor- age representation for nested records and discuss experiments on few-thousand node instances of the system.
-        {{< /details >}}    
-  - DOI: [https://doi.org/10.14778/1920841.1920886](https://doi.org/10.14778/1920841.1920886)
-  - Download: [36632.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
 - [**Language Models are Few-Shot Learners**](https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html)
   - Year: 2018
   - Authors: Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, Dario Amodei
