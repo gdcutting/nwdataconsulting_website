@@ -20,6 +20,15 @@ This is a list of important data-related papers (primarily in AI / ML, with some
         {{< /details >}}    
   - DOI: [https://doi.org/10.14778/1920841.1920886](https://doi.org/10.14778/1920841.1920886)
   - Download: [36632.pdf](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
+- [**You Only Look Once: Unified, Real-Time Object Detection**](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Redmon_You_Only_Look_CVPR_2016_paper.html)
+  - Year: 2016
+  - Authors: Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi
+  - Abstract: 
+        {{< details "We present YOLO, a new approach to object detection. Prior work on object detection repurposes classifiers to perform detection..." >}}
+            Instead, we frame object detection as a regression problem to spatially separated bounding boxes and associated class probabilities. A single neural network predicts bounding boxes and class probabilities directly from full images in one evaluation. Since the whole detection pipeline is a single network, it can be optimized end-to-end directly on detection performance. Our unified architecture is extremely fast. Our base YOLO model processes images in real-time at 45 frames per second. A smaller version of the network, Fast YOLO, processes an astounding 155 frames per second while still achieving double the mAP of other real-time detectors. Compared to state-of-the-art detection systems, YOLO makes more localization errors but is less likely to predict false positives on background. Finally, YOLO learns very general representations of objects. It outperforms other detection methods, including DPM and R-CNN, when generalizing from natural images to other domains like artwork.
+        {{< /details >}}    
+  - DOI: [https://doi.org/10.48550/arXiv.1506.02640](https://doi.org/10.48550/arXiv.1506.02640)
+  - Download: [1506.02640.pdf](https://arxiv.org/pdf/1506.02640.pdf)
 - [**Attention Is All You Need**](https://arxiv.org/abs/1706.03762) (aka the very influential and important 'The Transformer Paper')
   - Year: 2017
   - Authors: Robert Geirhos, David H. J. Janssen, Heiko H. Schütt, Jonas Rauber, Matthias Bethge, Felix A. Wichmann
