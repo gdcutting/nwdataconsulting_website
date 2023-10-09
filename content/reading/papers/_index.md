@@ -14,7 +14,10 @@ layout: "single"
 **This is a categoried list of important data-related papers (primarily in AI / ML, with some others mixed in). Click the links below to jump to categories:**
 
 <center> 
-<h2><a href = "#historical">Historical</a> &nbsp; | &nbsp; Computer Vision &nbsp;| &nbsp; NLP</h2>
+<h2><a href = "#historical">Historical</a> &nbsp; 
+  | 
+  &nbsp; <a href = "#computer-vision">Computer Vision</a> &nbsp;
+  | &nbsp; NLP</h2>
 <hr>
 <br>
 </center>
@@ -91,3 +94,18 @@ layout: "single"
             Through an enormous experimental effort, the structures of around 100,000 unique proteins have been determined5, but this represents a small fraction of the billions of known protein sequences6,7. Structural coverage is bottlenecked by the months to years of painstaking effort required to determine a single protein structure. Accurate computational approaches are needed to address this gap and to enable large-scale structural bioinformatics. Predicting the three-dimensional structure that a protein will adopt based solely on its amino acid sequence—the structure prediction component of the ‘protein folding problem’8—has been an important open research problem for more than 50 years9. Despite recent progress10,11,12,13,14, existing methods fall far short of atomic accuracy, especially when no homologous structure is available. Here we provide the first computational method that can regularly predict protein structures with atomic accuracy even in cases in which no similar structure is known. We validated an entirely redesigned version of our neural network-based model, AlphaFold, in the challenging 14th Critical Assessment of protein Structure Prediction (CASP14)15, demonstrating accuracy competitive with experimental structures in a majority of cases and greatly outperforming other methods. Underpinning the latest version of AlphaFold is a novel machine learning approach that incorporates physical and biological knowledge about protein structure, leveraging multi-sequence alignments, into the design of the deep learning algorithm.
         {{< /details >}}
   - Download: [s41586-021-03819-2.pdf](https://www.nature.com/articles/s41586-021-03819-2.pdf)
+
+
+<a name = "computer-vision">
+
+## Computer Vision
+
+- [**A ConvNet for the 2020s**](https://openaccess.thecvf.com/content/CVPR2022/html/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.html) 
+  - Year: 2022
+  - Journal: *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 2022, pp. 11976-11986
+  - Authors: Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, Christoph Feichtenhofer, Trevor Darrell, Saining Xie
+  - Abstract: 
+        {{< details "The 'Roaring 20s' of visual recognition began with the introduction of Vision Transformers (ViTs), which quickly superseded ConvNets as the state-of-the-art image classification model..." >}}
+            A vanilla ViT, on the other hand, faces difficulties when applied to general computer vision tasks such as object detection and semantic segmentation. It is the hierarchical Transformers (e.g., Swin Transformers) that reintroduced several ConvNet priors, making Transformers practically viable as a generic vision backbone and demonstrating remarkable performance on a wide variety of vision tasks. However, the effectiveness of such hybrid approaches is still largely credited to the intrinsic superiority of Transformers, rather than the inherent inductive biases of convolutions. In this work, we reexamine the design spaces and test the limits of what a pure ConvNet can achieve. We gradually "modernize" a standard ResNet toward the design of a vision Transformer, and discover several key components that contribute to the performance difference along the way. The outcome of this exploration is a family of pure ConvNet models dubbed ConvNeXt. Constructed entirely from standard ConvNet modules, ConvNeXts compete favorably with Transformers in terms of accuracy and scalability, achieving 87.8% ImageNet top-1 accuracy and outperforming Swin Transformers on COCO detection and ADE20K segmentation, while maintaining the simplicity and efficiency of standard ConvNets.
+        {{< /details >}}
+  - Download: [2201.03545.pdf](https://arxiv.org/pdf/2201.03545.pdf)
