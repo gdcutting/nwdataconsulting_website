@@ -53,7 +53,7 @@ This is a list of important data-related papers (primarily in AI / ML, with some
         {{< /details >}}    
   - DOI: [https://doi.org/10.48550/arXiv.1810.04805]()
   - Download: [1810.04805.pdf](https://arxiv.org/pdf/1810.04805.pdf)
-- [**Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores**](https://databricks.com/wp-content/uploads/2020/08/p975-armbrust.pdf)
+- [**Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores**](https://databricks.com/wp-content/uploads/2020/08/p975-armbrust.pdf) 
   - Year: 2020
   - Authors: Michael Armbrust, Tathagata Das, Liwen Sun, Burak Yavuz, Shixiong Zhu, Mukul Murthy, Joseph Torres,Herman vanH ovell,AdrianIonescu, Alicja Łuszczak,Michał Switakowski, Michał Szafranski, Xiao Li, Takuya Ueshin, Mostafa Mokhtar, Peter Boncz1, Ali Ghodsi,Sameer Paranjpye, Pieter Senster, Reynold Xin, Matei Zaharia
   - Abstract: 
