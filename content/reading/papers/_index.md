@@ -14,11 +14,14 @@ layout: "single"
 **This is a categoried list of important data-related papers (primarily in AI / ML, with some others mixed in). Click the links below to jump to categories:**
 
 <center> 
-<h2>Historical &nbsp; | &nbsp; Computer Vision &nbsp;| &nbsp; NLP</h2>
+<h2><a href = "#historical">Historical</a> &nbsp; | &nbsp; Computer Vision &nbsp;| &nbsp; NLP</h2>
 <hr>
 <br>
 </center>
 
+<a name = "Historical">
+
+## Historical
 
 - [**Dremel: Interactive Analysis of Web-Scale Datasets**](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf)
   - Year: 2010
