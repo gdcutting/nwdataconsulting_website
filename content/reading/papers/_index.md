@@ -11,7 +11,7 @@ layout: "single"
 
 <br>
 
-**This is a categoried list of important data-related papers (primarily in AI / ML, with some others mixed in). Click the links below to jump to categories:**
+**This is a categorized list of important data-related papers (primarily in AI / ML, with some others mixed in). Click the links below to jump to categories:**
 
 <center> 
 <h2><a href = "#historical">Historical</a> &nbsp; 
@@ -118,7 +118,7 @@ layout: "single"
 <hr>
 <a name = "nlp">
 
-## NLP
+## Natural Language Processing
 
 - [**LaMDA: Language Models for Dialog Applications**](https://arxiv.org/abs/2201.08239) 
   - Year: 2022

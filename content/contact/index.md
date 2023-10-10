@@ -3,10 +3,12 @@ title: "Contact"
 date: 2020-05-23T23:35:34-07:00
 draft: false
 ---
+Call <b><a href="tel:971-435-3435">971-435-3435</a></b> with questions or for an initial free consultation.
 
-<br><br>
+<br>
 
-[**Click here to book an appointment**](https://squareup.com/appointments/book/te87ie5un3hfh7/LVJS5MDJE4ZAP/start) with me on Square. Initial consultations are free.
+
+[**Click here to book an appointment**](https://squareup.com/appointments/book/te87ie5un3hfh7/LVJS5MDJE4ZAP/start) with me on Square. 
 
 <!-- Start Square Appointments Embed code -->
 <!--
@@ -30,4 +32,4 @@ display: inline-block;
 
 <br>
 
-Or feel free to email me at *[guy@nwdataconsulting.com](mailto:guy@nwdataconsulting.com)* with questions or comments.
+Or email me at **[guy@nwdataconsulting.com](mailto:guy@nwdataconsulting.com)** with questions or comments.
