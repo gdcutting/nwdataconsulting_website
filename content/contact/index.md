@@ -16,7 +16,7 @@ Call <b><a href="tel:971-435-3435">971-435-3435</a></b> with questions or for an
 
 <br>
 
-[**Click here to book an appointment**](https://calendar.app.google/pKsusoNKfuz6LibR8) with me on Google Calendar or select a time below: 
+[**Click here to book an appointment**](https://calendar.app.google/pKsusoNKfuz6LibR8) with me on Google Calendar or click below to select a time: 
 
 <!-- Google Calendar Appointment Scheduling begin -->
 <iframe src="https://calendar.google.com/calendar/appointments/AcZssZ0mjleKGZzF4muVz8-iHudAJjCAzPWeSprzU84=?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
