@@ -16,9 +16,11 @@ Call <b><a href="tel:971-435-3435">971-435-3435</a></b> with questions or for an
 
 <br>
 
-[**Click here to book an appointment**](https://squareup.com/appointments/book/te87ie5un3hfh7/LVJS5MDJE4ZAP/start) with me on Square or select a time below: 
+[**Click here to book an appointment**](https://calendar.app.google/pKsusoNKfuz6LibR8) with me on Google Calendar or select a time below: 
 
-<!-- Start Square Appointments Embed Code --><script src='https://square.site/appointments/buyer/widget/te87ie5un3hfh7/LVJS5MDJE4ZAP.js'></script><!-- End Square Appointments Embed Code -->
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/AcZssZ0mjleKGZzF4muVz8-iHudAJjCAzPWeSprzU84=?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
 
 <br>
 
