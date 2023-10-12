@@ -37,4 +37,4 @@ On a more personal note, I'm a huge jazz fan. See the [soundtrack page](/sountra
 
 <br>
 
-I'm also a writer of poetry, short fiction, and novels. I'm working on editing some material for posting to an online platform, so I'll post links here when I have them. As a writer, I consider effective communication to be at least as important as any of my technical skills. I hope that this site proves informative for you, even if you choose not to employ me as a consultant.
+I'm also a writer of poetry, short fiction, and novels. If you'd like to check out my writing, go to [www.guydcutting.com](https://www.guydcutting.com). I'm working on editing some material for posting to an online platform, so I'll post links here when I have them. As a writer, I consider effective communication to be at least as important as any of my technical skills. I hope that this site proves informative for you, even if you choose not to employ me as a consultant.

@@ -1,8 +1,10 @@
 ---
 title: "Bigquery Cost Control"
 date: 2023-04-09T00:35:34-07:00
-draft: true
+draft: false
 author: "Guy Cutting"
+tags: ["Jupyter", "BigQuery", "GCP", "Notebook", "Query Optimization", "Cost"]
+categories: ["In Practice"]
 ---
 
 A Jupyter notebook, hosted as a GitHub gist, with some techniques for making sure you don't accidentally run expensive queries in BigQuery.

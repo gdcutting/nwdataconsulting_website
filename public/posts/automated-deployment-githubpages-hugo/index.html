@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Automated Hugo Deployment using GitHub Pages - Northwest Data Consulting - Guy Cutting</title><meta name="Description" content="Data analytics, science, engineering, web, cloud, simulation, modeling consulting services in the pacific northwest and beyond"><meta property="og:title" content="Automated Hugo Deployment using GitHub Pages" />
+<meta property="og:description" content="Overview After experimenting with various ways to approach the site build, I finally find what I think is the best, most streamlined method: deploying on GitHub pages, using the automatic GitHub Actions to perform the Hugo build on the server side whenever changes are pushed to the build branch. This means that all I have to do to update the live site is to execute a handful of git commands (add files, commit, push), and everything else (the Hugo build and deploying the new rendered HTML and other files) happens automatically, making the process about as easy as possible." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/" /><meta property="og:image" content="https://www.nwdataconsulting.com/GDC-logo-web-trans.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-19T19:12:11-07:00" />
+<meta property="article:modified_time" content="2023-07-19T19:12:11-07:00" /><meta property="og:site_name" content="Northwest Data Consulting" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.nwdataconsulting.com/GDC-logo-web-trans.png"/>
+
+<meta name="twitter:title" content="Automated Hugo Deployment using GitHub Pages"/>
+<meta name="twitter:description" content="Overview After experimenting with various ways to approach the site build, I finally find what I think is the best, most streamlined method: deploying on GitHub pages, using the automatic GitHub Actions to perform the Hugo build on the server side whenever changes are pushed to the build branch. This means that all I have to do to update the live site is to execute a handful of git commands (add files, commit, push), and everything else (the Hugo build and deploying the new rendered HTML and other files) happens automatically, making the process about as easy as possible."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/" /><link rel="prev" href="https://www.nwdataconsulting.com/posts/overwhelm/" /><link rel="next" href="https://www.nwdataconsulting.com/posts/openai-model-performance-degrading/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Automated Hugo Deployment using GitHub Pages",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.nwdataconsulting.com\/posts\/automated-deployment-githubpages-hugo\/"
+        },"genre": "posts","wordcount":  2893 ,
+        "url": "https:\/\/www.nwdataconsulting.com\/posts\/automated-deployment-githubpages-hugo\/","datePublished": "2023-07-19T19:12:11-07:00","dateModified": "2023-07-19T19:12:11-07:00","publisher": {
+            "@type": "Organization",
+            "name": "","logo": "https:\/\/www.nwdataconsulting.com\/nwdataconsulting\/GDC-logo-web-trans.png"},"author": {
+                "@type": "Person",
+                "name": "Guy Cutting"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Northwest Data Consulting - Guy Cutting"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/GDC-logo-web-trans.png"
+        data-srcset="/GDC-logo-web-trans.png, /GDC-logo-web-trans.png 1.5x, /GDC-logo-web-trans.png 2x"
+        data-sizes="auto"
+        alt="/GDC-logo-web-trans.png"
+        title="/GDC-logo-web-trans.png" />Northwest Data Consulting</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Northwest Data Consulting Home"><i class="fa fa-home"></i> Home </a><a class="menu-item active" href="/posts/" title="Posts"><i class="fa fa-blog"></i> Blog </a><a class="menu-item" href="/mission/" title="Mission"><i class="fa fa-heart"></i> Mission </a><a class="menu-item" href="/services/" title="Services"><i class="fa fa-cloud"></i> Services </a><a class="menu-item" href="/soundtrack/" title="Soundtrack"><i class="fa fa-music"></i> Soundtrack </a><a class="menu-item" href="/contact"><i class="fa fa-phone"></i> Contact </a><a class="menu-item" href="/about"><i class="fa fa-user"></i> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Northwest Data Consulting - Guy Cutting"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/GDC-logo-web-trans.png"
+        data-srcset="/GDC-logo-web-trans.png, /GDC-logo-web-trans.png 1.5x, /GDC-logo-web-trans.png 2x"
+        data-sizes="auto"
+        alt="/GDC-logo-web-trans.png"
+        title="/GDC-logo-web-trans.png" />Northwest Data Consulting</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="Northwest Data Consulting Home"><i class="fa fa-home"></i>Home</a><a class="menu-item" href="/posts/" title="Posts"><i class="fa fa-blog"></i>Blog</a><a class="menu-item" href="/mission/" title="Mission"><i class="fa fa-heart"></i>Mission</a><a class="menu-item" href="/services/" title="Services"><i class="fa fa-cloud"></i>Services</a><a class="menu-item" href="/soundtrack/" title="Soundtrack"><i class="fa fa-music"></i>Soundtrack</a><a class="menu-item" href="/contact" title=""><i class="fa fa-phone"></i>Contact</a><a class="menu-item" href="/about" title=""><i class="fa fa-user"></i>About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Automated Hugo Deployment using GitHub Pages</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Guy Cutting</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-19">2023-07-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2893 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;14 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#choosing-a-theme-with-hugo">Choosing a theme with Hugo</a></li>
+    <li><a href="#deployment-options">Deployment Options</a>
+      <ul>
+        <li><a href="#choosing-between-github-deployment-options">Choosing Between Github Deployment Options</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-github-handles-the-deployment-code-as-infrastructure">How GitHub handles the deployment: Code-as-infrastructure</a></li>
+    <li><a href="#deployment-in-action-monitoring-progress">Deployment In Action: Monitoring Progress</a>
+      <ul>
+        <li><a href="#detailed-deployment-status">Detailed Deployment Status</a></li>
+        <li><a href="#using-commit-history-for-troubleshooting">Using Commit History For Troubleshooting</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="overview">Overview</h1>
+<p>After experimenting with various ways to approach the site build, I finally find what I think is the best, most streamlined method: deploying on GitHub pages, using the automatic GitHub Actions to perform the Hugo build on the server side whenever changes are pushed to the build branch. This means that all I have to do to update the live site is to execute a handful of git commands (add files, commit, push), and everything else (the Hugo build and deploying the new rendered HTML and other files) happens automatically, making the process about as easy as possible. This avoids having to manually upload newly rendered files as I would have to do with another hosting provider, or if I was using GitHub pages but not using the automatic deployment option. The rest of this article gives details on how to get up the automated deployment.</p>
+<h2 id="choosing-a-theme-with-hugo">Choosing a theme with Hugo</h2>
+<p>I finally got this site into shape with the theme (<a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer ">LoveIt</a>) chosen and configured. One of the few issues that I have with Hugo is the lack of theme standardization. There&rsquo;s not a lot of standardization enforced on theme developers, so there&rsquo;s a very wide range of theme setups and configurations out there. As a result, theme testing can be onerous when you&rsquo;re working on a new site. One of the really nice things about WordPress is that (since theme standardization <em>is</em> heavily enforced), changing themes is as easily as adding and activating the theme in the admin interface (which just requires a few clicks). With Hugo, you have to download the theme manually, decide whether or not to add the new theme as a Hugo module or git submodule, then figure out where in the theme configuration the options that are most important to you live. Sometimes the theme doesn&rsquo;t work right out of the box, and you get a broken site and have to dig around to figure out the configuration change that will get you a properly working base configuration before you can even check out how the theme looks with your content and start to play with the options. This is by far the thing that I like least about the development cycle with Hugo, and unfortunately there&rsquo;s no way around it, because the lack of theme standardization is at this point baked into how the project is run.</p>
+<h2 id="deployment-options">Deployment Options</h2>
+<p>The Hugo project has a page describing the process, from start to finish, of using automated deployment to perform your Hugo build with GitHub Pages:</p>
+<p><strong><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank" rel="noopener noreffer ">Host on Github Pages</a></strong></p>
+<p>Note that you can simplify the above process a bit by choosing to let GitHub automatically supply a workflow file at step 4; this will eliminate step 5 (which has you create a blank file and past in content from the Hugo recommended workflow file - the GitHub default one works just as well).</p>
+<p>Once you choose a theme (which usually requires several rounds of the process described above, since for each candidate theme for your new site you at least have to do some downloading and basic setup, and usually on top of that you have to do some troubleshooting for a broken initial setup), the development cycle becomes a lot easier. At that point, when you&rsquo;re adding your own content and working with the templating engine, you&rsquo;re in more clearly mapped territory where there&rsquo;s less room for confusion. Creating content obviously depends on you and not a theme developer, and the templating is thoroughly documented within the Hugo project (unlike themes). So now I&rsquo;m at the point where I&rsquo;m past the worst of the hassle and can just focus on the fun part, which is making content. But there&rsquo;s one more issue to solve, and its an important one to get right since it will determine whether the site is easy to maintain and update in the future. That issue is how to deploy the site. The least technical way probably is to run Hugo locally every time there are changes, then just upload the newly rendered .html files to a web server. I have a Dreamhost account, and I could use it for this deployment, but I was interested in using <a href="https://pages.github.com/" target="_blank" rel="noopener noreffer ">GitHub Pages</a>, partly to learn more about it and partly because my Dreamhost plan only includes one hosted site, and I can get the site hosted for free with Pages.</p>
+<p>With Pages, there&rsquo;s more than one way to handle the deployment. From what I can tell, there are three in fact:</p>
+<ul>
+<li>as described above, run Hugo locally to render content additions/updates, and then manually push the files to GitHub (either using CLI git or through the GitHub web interface.) This method works fine but doesn&rsquo;t take advantage of all the GitHub features that are available.</li>
+<li>the second method (see pick below) is to use GitHub&rsquo;s automated deployment feature to deploy a static site. With this option, I still have to build the site locally (by running Hugo to render the new content and config changes). I&rsquo;m not honestly sure why you&rsquo;d use this option, since if you&rsquo;re doing the Hugo build locally, the only thing left to do is to transfer the files to GitHub servers, which will happen automatically when you do whatever git workflow (CLI, through a VS Code extension, etc.) you do. GitHub Pages serves out of your repo, so once the files get updated there&rsquo;s nothing else to update. If someone wants to fill me in on why you&rsquo;d want to use this method, feel free. Maybe I&rsquo;m missing something.</li>
+<li>the third and pretty clearly best method is to use GitHub automated deployment option with the remote Hugo build. With this method, once you push your files to the repo, GitHub performs the Hugo build automatically and your site gets updated with the new content. This makes it super easy to do content changes. My standard git workflow (I find myself still using CLI most of the time because it is faster) looks like:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add -A
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#39;my commit message&#39;</span>
+</span></span><span style="display:flex;"><span>git pull 
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><p>which stages changes, performs the commit, pulls down changes from the remote repo, and pushes local changes to the remote. This just takes a few seconds, and once you do this, everything else (the Hugo build and site update) happens (mostly) behind the scenes on the GitHub side, using GitHub Actions.</p>
+<p>There&rsquo;s a further bit of automation that we can employ here as well. Following this helpful article:</p>
+<p><a href="https://dev.to/bivor/alias-for-git-add-commit-and-push-all-together-5ako" target="_blank" rel="noopener noreffer ">Alias for git add, commit, and push all together</a></p>
+<p>I did, well, just what the title suggests, creating an alias to pack the most common git workflow commands for deploying content updates into one command (I used <code>acp</code>, short for Add Commit Push). If you simply run</p>
+<p>git config &ndash;global alias.acp &lsquo;!f() { git add -A &amp;&amp; git commit -m &ldquo;$@&rdquo; &amp;&amp; git push; }; f&rsquo;</p>
+<p>and replace &lsquo;acp&rsquo; with your chosen alias, you can can tell git to compress multiple git commands into one. Now whenever I have modified files and I want to push the changes to GitHub, all I have to do is run:</p>
+<p><code>git acp &quot;my commit message&quot;</code></p>
+<p>and provide a relevant commit message. That&rsquo;s it! Shortening three commands (add, commit, push), is a small time savings but it adds up over time when you&rsquo;re pushing frequent updates. So now when I have new content I just have to do <code>git acp</code> with a commit message and git automatically adds the updated files to the local HEAD, commits the changes, pushes those changes to the remote repository, then (on the GitHub server side) performs the Hugo build and deploys the updates. That&rsquo;s a pretty slick workflow.</p>
+<h3 id="choosing-between-github-deployment-options">Choosing Between Github Deployment Options</h3>
+<p>Here&rsquo;s a shot of the repo settings GitHub Pages section showing the second two deployment options discussed above (under &lsquo;Use a suggested workflow&hellip;&rsquo;):
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../github-pages-deploy-options.png"
+        data-srcset="../../github-pages-deploy-options.png, ../../github-pages-deploy-options.png 1.5x, ../../github-pages-deploy-options.png 2x"
+        data-sizes="auto"
+        alt="../../github-pages-deploy-options.png"
+        title="GitHub Pages deployment options for Hugo site" /></p>
+<h2 id="how-github-handles-the-deployment-code-as-infrastructure">How GitHub handles the deployment: Code-as-infrastructure</h2>
+<p>There&rsquo;s a bit of infrastructure-as-code that GitHub uses to handle these automated deployments - a .yaml file that lives in your directory and gives build parameters such as Hugo version, OS version, which branch to build from, etc:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../github-deploy-workflow-file.png"
+        data-srcset="../../github-deploy-workflow-file.png, ../../github-deploy-workflow-file.png 1.5x, ../../github-deploy-workflow-file.png 2x"
+        data-sizes="auto"
+        alt="../../github-deploy-workflow-file.png"
+        title="GitHub workflow file for Pages site build" /></p>
+<p>Most of this is boilerplate and you don&rsquo;t need to worry about making changes there; it looks like there&rsquo;s a lot to the workflow file but that .yaml workflow file is generated automatically when you select your preferred deployment action (Hugo build or statis site) under the Pages settings, so you don&rsquo;t need to be familiar with all the details. But it is interesting to look under the hood to glean some info about how these builds are performed. The only thing you&rsquo;ll probably want to check is the build branch, because if you&rsquo;re not using <code>main</code> then you&rsquo;ll want to specify that near the top with the <code>branches</code> parameter.</p>
+<h2 id="deployment-in-action-monitoring-progress">Deployment In Action: Monitoring Progress</h2>
+<p>Now that we&rsquo;ve got the automation workflow set up, what happens when we run it, which happens automatically when any changes are pushed to the build branch (in my case <code>my-pages</code>)? One of the great things about GitHub is that it has all sorts of fancy machinery (hooks on the backend and JS on the front) to detect changes and display status in real time. When you trigger the build by pushing changes to the build branch, GitHub detects the changes, invokes your specified Action(s), and updates the status display in real time:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../github-actions-in-progress.png"
+        data-srcset="../../github-actions-in-progress.png, ../../github-actions-in-progress.png 1.5x, ../../github-actions-in-progress.png 2x"
+        data-sizes="auto"
+        alt="../../github-actions-in-progress.png"
+        title="GitHub Actions progress update" /></p>
+<h3 id="detailed-deployment-status">Detailed Deployment Status</h3>
+<p>This build progress page shows you an overview with the action number (22), the commit that triggered it (<code>2adfda8</code>), the &lsquo;In Progress&rsquo; status, and that the Hugo build is ongoing, to be followed by the deployment. If you click on &lsquo;deploy&rsquo;, you&rsquo;ll get a more detailed progress page for the deploy action:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../github-actions-detailed-progress.png"
+        data-srcset="../../github-actions-detailed-progress.png, ../../github-actions-detailed-progress.png 1.5x, ../../github-actions-detailed-progress.png 2x"
+        data-sizes="auto"
+        alt="../../github-actions-detailed-progress.png"
+        title="GitHub Actions progress update" />.</p>
+<p>We can assume that behind the scenes GitHub is spinning up a Docker container with a Linux machine to perform the deployment. If we clicked on &lsquo;Operating System&rsquo; and &lsquo;Runner image&rsquo; we would get more details here. You get some detailed deployment actions and confirmation that the deployment has been completed. Once you have your workflow set up, tested, and working correctly, it shouldn&rsquo;t be necessary to look at these deployment action details very often (or ever). But if you do run into deployment issues, this progress page is where you can go for details that will help you troubleshoot whatever is going on.</p>
+<h3 id="using-commit-history-for-troubleshooting">Using Commit History For Troubleshooting</h3>
+<p>There&rsquo;s another aspect of this automated deployment setup that I really like, and that&rsquo;s keeping a clear record of the update/commit history to the site. This can be very useful when performing troubleshooting. Usually when you make a site update (particularly involving site or theme configuration), it is immediately clear if this change breaks something. If you make an errant configuration change, this typically manifests itself as a broken logo image or some other such obvious error in the rendered site. But that&rsquo;s not always the case. Sometimes you make an update, and you don&rsquo;t realize until later that, somewhere along the line, something got broken (particularly with site and theme configuration changes, which can interact in unexpected ways). And when you run into these issues where no immediate solution presents itself, troubleshooting can be <em>very</em> frustrating and time-consuming. Ever spend half a day tracking down a problem that just came down to one small change in one configuration file that you made hours ago and then forgot about? A change whose actual fix, once identified, takes literally just seconds, but anyone doing any serious web development work has experienced this incredibly frustrating situation at some point, where it takes hours to identify a problem that can be fixed with a few keystrokes.</p>
+<p>Automated deployment with Pages / Actions, in combination with descriptive commit messages, provides a powerful tool for tracking down errors in the site build. Let&rsquo;s say I&rsquo;m working on the site, clicking through pages, and I realize that something is awry. Usually in this case you think of the most recent commit as the culprit, but what if the most recent change could not have been responsible for the problem you&rsquo;re seeing? In that case what do you do? Without a clear record of what was changed and when, you have to go through your own mental list of recent changes to isolate the culprit. If you aren&rsquo;t using automated deployment with Actions (or some other tool), you don&rsquo;t really have an easy way to do this. Server logs will tell you when a file was updated, but won&rsquo;t show you the content of the update, so you&rsquo;re purely reliant on your own memory and clicking around to look at all the possible sources of the problem. If you&rsquo;re in a phase of making frequent content updates, this can be difficult. What if you&rsquo;ve made twenty commits in the last two days? No one can remember the details of all those changes. And that&rsquo;s just for a lowly single-proprietor website - what if you have a more complex site that&rsquo;s being developed by multiple people simultaneously?</p>
+<p>The commit history stored by GitHub Actions (which we are using for automated site build and deployment) can be a powerful tool for simplifying this sort of troubleshooting. This is one reason why it&rsquo;s important to follow the rule of <a href="https://medium.com/nerd-for-tech/commit-frequently-push-often-2ba996307a3f" target="_blank" rel="noopener noreffer "><em>commit frequently, push often</em></a> (or I might phrase it as <em>perform a push with every commit</em>).  That way, in the context of a GitHub Pages deployment with Hugo, you have exactly one commit for every automated build/deploy of the site. Combine that with using meaningful commit messages (i.e. &lsquo;added logo image to footer partial&rsquo; rather than &lsquo;updated footer&rsquo; or no commit message at all). If you follow this set of practices, your GitHub Actions log can quickly provide a lot of information about what was updated where and when:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/github-actions-commit-history.png"
+        data-srcset="/github-actions-commit-history.png, /github-actions-commit-history.png 1.5x, /github-actions-commit-history.png 2x"
+        data-sizes="auto"
+        alt="/github-actions-commit-history.png"
+        title="GitHub Actions commit history" /></p>
+<p>This is one of the oustanding things about GitHub and why so many developers use it as an integral part of their process. Look at how much information you can see in just that one page:</p>
+<ul>
+<li>a compact list of all your workflow runs with the newest first</li>
+<li>for each run, brief deployment details, a commit number, deployment branch, how long ago the deployment was performed, and how long the deployment took to complete</li>
+<li>from there, you can click into a branch or a commit to see further details about the</li>
+</ul>
+<p>Let&rsquo;s see I&rsquo;m interested in the last deployment action in the list in the above image (&lsquo;replaced front logo with avatar&rsquo;). If I click into the commit details (by clicking on the commit number - <code>377218e </code> under the action), then GitHub takes me to the commit details page:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/github-commit-details-page.png"
+        data-srcset="/github-commit-details-page.png, /github-commit-details-page.png 1.5x, /github-commit-details-page.png 2x"
+        data-sizes="auto"
+        alt="/github-commit-details-page.png"
+        title="GitHub commit details page" /></p>
+<h1 id="summary">Summary</h1>
+<p>After trying a number of CMS and other build options for this site, I arrived at Hugo as the best for my purposes (see <a href="../joomla-to-hugo/" rel="">the post on switching from Joomla to Hugo</a>) for more details. Originally I had planned to host the new Hugo site at Dreamhost and do the build myself locally whenever there were changes. But I wanted to try out GitHub pages, and digging more into the features that Pages makes available, one of the most helpful seemed to be automated deployment.</p>
+<p>If you choose to let GitHub Pages handle your Hugo deployment automatically with GitHub Actions, you can simplify the deployment process down to its bare minimum: just push your most recent changes to the working Pages branch of your repository, and GitHub will handle the build and deployment for you. Then you can just focus on creating content and the deployment will happen automatically with just a few keystrokes.</p>
+<p>I&rsquo;d also like to reiterate that Hugo, with its local previewing capabilities, makes the content development cycle very fast and easy. When you invoke Hugo with the <code>server</code> option (just run <code>hugo server</code>), it automatically runs a lightweight local web server, and automatically updates the page when it detects any new content, so you can preview new content locally in real time as you go and don&rsquo;t have to wait for remote build and deployment. Then, when you&rsquo;re sure the new page (or whatever other update) is ready to go, you can do your git workflow once to automatically deploy to Pages. This saves a lot of time and makes developing new content on a Hugo / Pages site faster than any other method I&rsquo;ve found (including CMS, which are actually kind of clunky, since every time you click the &lsquo;update&rsquo; button you have to wait for multiple database queries and server-side PHP build activity).</p>
+<p>After many iterations of this website, I think I&rsquo;ve finally found the setup that works best for me. Hugo makes content changes quick and easy, since you write pages in markdown and they are automatically rendered into HTML. Using Hugo makes your site fast and secure, since the server only has to deliver .html and .css files, and does not have a stack of PHP, database, and other software to run. And using automated deployment with Pages makes the process as simple as it possibly can be by taking advantage of GitHub Actions and its behind-the-scenes build and deploy machinery to handle everything for you but actually writing the new content.</p>
+<p>Picking a theme, creating the content for the new site, and setting up automated deployment took a few days total altogether, but that&rsquo;s pretty quick to get a whole website up and running. I couldn&rsquo;t be happier with this new setup.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-07-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/" data-title="Automated Hugo Deployment using GitHub Pages"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/" data-title="Automated Hugo Deployment using GitHub Pages"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/" data-title="Automated Hugo Deployment using GitHub Pages"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/" data-title="Automated Hugo Deployment using GitHub Pages"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/overwhelm/" class="prev" rel="prev" title="Overwhelmed by data?"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Overwhelmed by data?</a>
+            <a href="/posts/openai-model-performance-degrading/" class="next" rel="next" title="OpenAI Model Performance Degrading In Recent Weeks">OpenAI Model Performance Degrading In Recent Weeks<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div align = "center">
+                
+            </div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-FJB4XW60Y0', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-FJB4XW60Y0" async></script></body>
+</html>

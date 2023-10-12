@@ -25,7 +25,7 @@ You might be asking yourself: how does 'data consulting' differ from 'software c
 
 <br>
 
-That's where data consulting comes in. I can take a look at the picture of your data across the whole organization and help you find ways to improve your data culture. If you're not primarily a tech or software company, a lot of software consultants might not concern themselves with your wider data needs. Those often involve questions far beyond application development. (link to blog article)
+That's where data consulting comes in. I can take a look at the picture of your data across the whole organization and help you find ways to improve your data culture. If you're not primarily a tech or software company, a lot of software consultants might not concern themselves with your wider data needs. Those often involve questions far beyond application development.
 
 <br>
 

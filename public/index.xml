@@ -1,0 +1,81 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Northwest Data Consulting - Guy Cutting</title>
+        <link>https://www.nwdataconsulting.com/</link>
+        <description>Data analytics, science, engineering, web, cloud, simulation, modeling consulting services in the pacific northwest and beyond</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 Jul 2023 02:37:11 -0700</lastBuildDate>
+            <atom:link href="https://www.nwdataconsulting.com/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Github Pages Custom Domain DNS Configuration</title>
+    <link>https://www.nwdataconsulting.com/posts/github-pages-dns-configuration/</link>
+    <pubDate>Sun, 23 Jul 2023 02:37:11 -0700</pubDate>
+    <author>Guy Cutting</author>
+    <guid>https://www.nwdataconsulting.com/posts/github-pages-dns-configuration/</guid>
+    <description><![CDATA[I&rsquo;m thrilled to find an ideal set up for this site, which uses GitHub Pages for hosting and GitHub Actions for automated build and deployment. There was one last piece to the puzzle of finally launching the site, and that was configuring the custom DNS with GitHub Pages. When Pages hosts your site, it does so by default at a URL like https://gdcutting.github.io/nwdataconsulting/. There&rsquo;s nothing wrong with that URL as-is, but for branding a business, we obviously want a top-level domain that reflects the business name (like https://www.]]></description>
+</item>
+<item>
+    <title>OpenAI Model Performance Degrading In Recent Weeks</title>
+    <link>https://www.nwdataconsulting.com/posts/openai-model-performance-degrading/</link>
+    <pubDate>Sun, 23 Jul 2023 01:33:48 -0700</pubDate>
+    <author>Guy Cutting</author>
+    <guid>https://www.nwdataconsulting.com/posts/openai-model-performance-degrading/</guid>
+    <description><![CDATA[ChatGPT Model Performance In Question OpenAI has been making all sorts of headlines in recent months after its breakthrough performance with the Chat-GPT3 model. One of those records was the fastest application debut (in terms of user downloads) in history, reaching 100m users in January, just two months after launching.
+But serious questions are already emerging about the long-term trajectory of the company and its flagship chat models. User data from May and June showed a ten percent drop in user base from month to month.]]></description>
+</item>
+<item>
+    <title>Automated Hugo Deployment using GitHub Pages</title>
+    <link>https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/</link>
+    <pubDate>Wed, 19 Jul 2023 19:12:11 -0700</pubDate>
+    <author>Guy Cutting</author>
+    <guid>https://www.nwdataconsulting.com/posts/automated-deployment-githubpages-hugo/</guid>
+    <description><![CDATA[Overview After experimenting with various ways to approach the site build, I finally find what I think is the best, most streamlined method: deploying on GitHub pages, using the automatic GitHub Actions to perform the Hugo build on the server side whenever changes are pushed to the build branch. This means that all I have to do to update the live site is to execute a handful of git commands (add files, commit, push), and everything else (the Hugo build and deploying the new rendered HTML and other files) happens automatically, making the process about as easy as possible.]]></description>
+</item>
+<item>
+    <title>Overwhelmed by data?</title>
+    <link>https://www.nwdataconsulting.com/posts/overwhelm/</link>
+    <pubDate>Fri, 14 Apr 2023 16:43:28 -0700</pubDate>
+    <author>Guy Cutting</author>
+    <guid>https://www.nwdataconsulting.com/posts/overwhelm/</guid>
+    <description><![CDATA[I recently came across a couple of articles that raise a common issue that organizations must address in dealing with their data: being overwhelmed. Here&rsquo;s the first piece:
+How To Move Forward When You&rsquo;re Feeling Overwhelmed By Data
+Another piece focuses on marketing data, but is relevant to the larger data discussion:
+67% Of CMOs Say They Are Overwhelmed With Data
+Being overwhelmed is one of the biggest problems that organizations encounter when dealing with data.]]></description>
+</item>
+<item>
+    <title>What does it mean to be &#39;data-driven&#39;?</title>
+    <link>https://www.nwdataconsulting.com/posts/data-driven-meaning/</link>
+    <pubDate>Wed, 12 Apr 2023 17:59:56 -0700</pubDate>
+    <author>Guy Cutting</author>
+    <guid>https://www.nwdataconsulting.com/posts/data-driven-meaning/</guid>
+    <description><![CDATA[Introduction One of the many great resources for me on my professional journey has been the book Creating A Data-Driven Organization, by Carl Anderson. I would recommend it for anyone who&rsquo;s involved in working with data, from managers and executives, to analysts, scientists, engineers and others.
+Prerequisites The first line of Anderson&rsquo;s book is that &ldquo;Data-drivenness is about building tools, abilities, and, most crucially, a culture that acts on data.&rdquo; In explaining further what it means to be data-driven, Anderson defines a few prerequisites:]]></description>
+</item>
+<item>
+    <title>What&#39;s the relationship between data analytics, data science, and data engineering?</title>
+    <link>https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/</link>
+    <pubDate>Tue, 11 Apr 2023 19:21:44 -0700</pubDate>
+    <author>Guy Cutting</author>
+    <guid>https://www.nwdataconsulting.com/posts/data-analytics-science-engineering/</guid>
+    <description><![CDATA[This diagram is helpful for visualizing the relationship between data engineering, data science, and the business stakeholders. Thanks to David Holm on Twitter.
+A subject that is sometimes the source of ambiguity and confusion is the relationship between data analytics, data science, and data engineering. Increasingly common usage of such terms such as data analytics engineering, business intelligence engineering, and others can make it even more unclear where the boundaries between these categories and roles actually lie.]]></description>
+</item>
+<item>
+    <title>Joomla to Hugo</title>
+    <link>https://www.nwdataconsulting.com/posts/joomla-to-hugo/</link>
+    <pubDate>Mon, 10 Apr 2023 22:57:30 -0700</pubDate>
+    <author>Guy Cutting</author>
+    <guid>https://www.nwdataconsulting.com/posts/joomla-to-hugo/</guid>
+    <description><![CDATA[This post is slightly off topic, but as someone who always likes to peer under the hood when I look at other people&rsquo;s websites, I think some of you might appreciate it. In building this website, I made the decision to leave Joomla behind and embrace Hugo, and I couldn&rsquo;t be happier with the decision.
+For years my business website used Joomla, the open source CMS. I picked Joomla because, after using WordPress for a while, I wanted something with more features and ability to customize.]]></description>
+</item>
+<item>
+    <title>Bigquery Cost Control</title>
+    <link>https://www.nwdataconsulting.com/posts/bigquery-cost-control/</link>
+    <pubDate>Sun, 09 Apr 2023 00:35:34 -0700</pubDate>
+    <author>Guy Cutting</author>
+    <guid>https://www.nwdataconsulting.com/posts/bigquery-cost-control/</guid>
+    <description><![CDATA[A Jupyter notebook, hosted as a GitHub gist, with some techniques for making sure you don&rsquo;t accidentally run expensive queries in BigQuery.]]></description>
+</item>
+</channel>
+</rss>

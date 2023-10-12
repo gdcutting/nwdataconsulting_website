@@ -1,8 +1,11 @@
 ---
 title: "What does it mean to be 'data-driven'?"
 date: 2023-04-12T17:59:56-07:00
-draft: true
+draft: false
 author: "Guy Cutting"
+weight: 
+tags: ["Data", "Data-driven", "Culture", "Organization", "Data Management"]
+categories: ["Data Studies"]
 ---
 
 ## Introduction

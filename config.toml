@@ -1,11 +1,12 @@
-baseURL = "http://www.nwdataconsulting.com/"
+baseURL = "https://www.nwdataconsulting.com"
 languageCode = "en-us"
-title = "Northwest Data Consulting - Guy Cutting"
+title = "Northwest Data Consulting Portland, Oregon - Guy Cutting"
 theme = "LoveIt"
+# blah
 
 [params]
   # Sets the meta tag description
-  description          = "Data analytics, science, engineering, web, cloud, simulation, modeling consulting services in the pacific northwest and beyond"
+  description          = "Data analytics, data science, data engineering, web, cloud, simulation, modeling consulting services in portland, oregon, seattle, the pacific northwest and beyond"
   # Sets the navbarTitle that appears in the top left of the navigation bar
   navbarTitle          = "Guy Cutting - Data Consulting"
   # Sets where "View More Posts" links
@@ -22,32 +23,22 @@ theme = "LoveIt"
 # Identifier prepends a Font Awesome icon to the menu item
 # maybe simplify to Data Science, Cloud, Complex Systems
 # and put subcategories (HPC, Modeling, etc.) in category pages
-#[Menus]
-#  main = [
-#      {Name = "Home", URL = "/", Weight = "1", identifier = "fa fa-home"},
-#      {Name = "Blog", URL = "/post/", Weight = "2"},
-#      #{Name = "Web", URL = "/services/web", Weight = "3"},
-#      #{Name = "Data Science & ML", URL = "/datascience/", Weight = "4"},
-#      #{Name = "Modeling / Sim.", URL = "/datascience/", Weight = "4"},
-#     #{Name = "Cloud", URL = "/cloud/", Weight = "5"},
-#      #{Name = "Complex Systems", URL = "/systems/", Weight = "5"},
-#      {Name = "Mission", URL = "/mission/", Weight = "6"},
-#      {Name = "Services", URL = "/services/", Weight = "7"},
-#      {Name = "Build", URL = "/services/build", Weight = "7", parent = "Services"},
-#      {Name = "About", URL = "/about/", Weight = "8"},
-#      {Name = "Contact", URL = "/contact/", Weight = "9"}
-#  ]
 
 [menu]
 [[menu.main]]
   name = 'Home'
   pageRef = '/'
   pre = '<i class="fa fa-home"></i>'
-  weight = 10
+  weight = 0
 [[menu.main]]
   name = 'Blog'
   pageRef = '/posts/'
   pre = '<i class="fa fa-blog"></i>'
+  weight = 10
+[[menu.main]]
+  name = 'Reading'
+  pageRef = '/reading/'
+  pre = '<i class="fa fa-book"></i>'
   weight = 20
 [[menu.main]]
   name = 'Mission'
@@ -89,6 +80,39 @@ theme = "LoveIt"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.tableOfContents]
+    endLevel = 4
+    startLevel = 1
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+  category = "categories"
+
+[related]
+  includeNewer = false
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = 'keywords'
+    weight = 100
+  [[related.indices]]
+    name = 'date'
+    weight = 10

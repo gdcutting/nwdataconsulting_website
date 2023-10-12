@@ -9,7 +9,7 @@
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = "gdcutting"
+  gitRepo = "gdcutting/nwdataconsulting/"
   # which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
@@ -47,7 +47,7 @@
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      logo = "/nwdataconsulting/GDC-logo-web-trans.png"
+      logo = "/GDC-logo-web-trans.png"
       # title name
       # 标题名称
       name = "Northwest Data Consulting"
@@ -181,7 +181,7 @@
       gravatarEmail = ""
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = "/nwdataconsulting/gdc_headshot_geode.png"
+      avatarURL = "/gdc-headshot.png"
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
       title = ""
@@ -208,10 +208,11 @@
   # 主页的社交信息设置
   [params.social]
     GitHub = "gdcutting"
-    Linkedin = ""
+    Linkedin = "guy-cutting-86839b49"
     Twitter = ""
     Instagram = ""
-    Facebook = "100091669697530"
+    # fb: 100091669697530
+    Facebook = ""
     Telegram = ""
     Medium = ""
     Gitlab = ""
@@ -279,8 +280,8 @@
     Plume = ""
     HackTheBox = ""
     RootMe= ""
-    Email = ""
-    Phone = ""
+    Email = "guy@nwdataconsulting.com"
+    Phone = "971-435-3435"
     RSS = ""
 
   # Page global config
