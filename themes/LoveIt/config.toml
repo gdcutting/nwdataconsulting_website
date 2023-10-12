@@ -208,10 +208,11 @@
   # 主页的社交信息设置
   [params.social]
     GitHub = "gdcutting"
-    Linkedin = ""
+    Linkedin = "guy-cutting-86839b49"
     Twitter = ""
     Instagram = ""
-    Facebook = "100091669697530"
+    # fb: 100091669697530
+    Facebook = ""
     Telegram = ""
     Medium = ""
     Gitlab = ""
@@ -280,7 +281,7 @@
     HackTheBox = ""
     RootMe= ""
     Email = "guy@nwdataconsulting.com"
-    Phone = ""
+    Phone = "941-435-3435"
     RSS = ""
 
   # Page global config
